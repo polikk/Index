@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="./css/main.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/ajax-loader.gif")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.eot")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.ttf")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.woff")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.svg")
+        title Document
+    body
+        include header.pug
+        main
+           section.full-news
+                .container
+                    .full-news-wrapper
+                        .big-news
+                            .big-news-card
+                                figure
+                                    img(src='./img/news-imgg.png')
+                                p.news-card-date  12:55, 09/04/2020
+                                h3.news-card-title Lorem ipsum dolor sit amet
+                                p.news-card-subtitle Ut enim ad minim veniam, quis nostrud exer`citation ullamc
+                                p.news-card-text Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        .news-card
+                            article.article
+                                figure
+                                    img.article__img(src="./img/news.jpeg", alt="", srcset="")
+                                .article-section
+                                    span.article__date 09/04
+                                    p.article__title Lorem<br> ipsum dolo sit amet,
+                                    p.article__text Ut enim ad minim veniam,quis nostrud exercitation ullamc
+                                a.btn-about.btn-article(href="#") Більше
+                            article.article
+                                figure
+                                    img.article__img(src="./img/news.jpeg", alt="", srcset="")
+                                .article-section
+                                    span.article__date 09/04
+                                    p.article__title Lorem<br> ipsum dolo sit amet,
+                                    p.article__text Ut enim ad minim veniam,quis nostrud exercitation ullamc
+                                a.btn-about.btn-article(href="#") Більше
+        include footer.pug
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js')
+        script(src="./js/main.js")

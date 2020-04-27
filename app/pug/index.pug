@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="./css/main.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/ajax-loader.gif")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.eot")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.ttf")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.woff")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.svg")
+        title Document
+    body
+        include header.pug
+        main
+            section.main
+                .container
+                    .main-wrap
+                        .main-header
+                            .main-header__wrap
+                                h1.main__title Хор Щедрик
+                                p.main__subtitle диригент Маріанна Сабліна
+                            .year Засновано
+                                span 1971
+                        .main-info
+                            img.main__img(src="./img/main-clider.jpg", alt="", srcset="")
+                            img.main__img(src="./img/main-clider.jpg", alt="", srcset="")
+                        .main-about 
+                            p.main__text Щедрик - піввікова унікальна традиція хорового співу
+                            a.btn-about(href="#") Детальніше
+            section.award
+                .container
+                    h2.section-title Наші нагороди
+                    .award-wrap
+                        .awards
+                            p.awards__title 2019
+                            p.awards__text Перше місце з відзнакою “Видатний успіх” в категорії Treble Choirs / Жіночі хори/ XIII “Summa Cum Laude” International Youth Music Festival у Відні (Австрія), 2019 
+                        .awards
+                            p.awards__title 2018
+                            p.awards__text «Золотий Давид» — Гран-прі VII Міжнародного фестивалю-конкурсу оркестрових і хорових колективів у Флоренції (Італія), 2018
+                        .awards
+                            p.awards__title 2005
+                            p.awards__text Золотий диплом найвищого ступеня та Гран-прі I Міжнародного конкурсу «Musica sacra a Roma» у Римі (Італія), 2005
+                    a.btn-about.award__btn(href='#') Більше нагород
+            section.news
+                .container
+                    h2.section-title Новини
+                    .news-wrap
+                        article.article
+                            figure
+                                img.article__img(src="./img/news.jpeg", alt="", srcset="")
+                            .article-section
+                                span.article__date 09/04
+                                p.article__title Lorem<br> ipsum dolo sit amet,
+                                p.article__text Ut enim ad minim veniam,quis nostrud exercitation ullamc
+                            a.btn-about.btn-article(href="#") Більше
+                        article.article
+                            figure
+                                img.article__img(src="./img/news.jpeg", alt="", srcset="")
+                            .article-section
+                                span.article__date 09/04
+                                p.article__title Lorem<br> ipsum dolo sit amet,
+                                p.article__text Ut enim ad minim veniam,quis nostrud exercitation ullamc 
+                            a.btn-about.btn-article(href="#") Більше
+                        article.article
+                            figure
+                                img.article__img(src="./img/news.jpeg", alt="", srcset="")
+                            .article-section
+                                span.article__date 09/04
+                                p.article__title Lorem<br> ipsum dolo sit amet,
+                                p.article__text Ut enim ad minim veniam,quis nostrud exercitation ullamc
+                            a.btn-about.btn-article(href="#") Більше
+                    a.btn-about.news__btn(href='#')  Більше новин
+            section.family
+                .container
+                    .family-wrap
+                        h2.section-title Бажаєте стати артистом хору Щедрик?
+                        button.btn Записатись
+            section.audio
+                .container
+                    // h2.section-title Дискографія
+                    img(src="./img/disk(delate).png", alt="", srcset="")
+            section.hear
+                .container
+                    .family-wrap
+                        h2.section-title Бажаєте почути виступ хору Щедрик?
+                        button.btn Запросити
+            section.community  
+                .container
+                    h2.section-title Спільнота
+                    .community-wrap
+                        .comunity-part
+                            img.community__img(src="./img/kpi.jpg", alt="", srcset="")
+                            img.community__img(src="./img/tofi.jpg", alt="", srcset="")
+                            img.community__img(src="./img/info.jpg", alt="", srcset="")
+                            img.community__img(src="./img/commut.jpg", alt="", srcset="")
+                            img.community__img(src="./img/cultural.png", alt="", srcset="")
+            section.contacts
+                .container  
+                    h2.section-title Контакти
+                    .contacts-wrap
+                        .contacts-info
+                            .contacts-about
+                                h5.contacts__title Наша адреса:
+                                address.contacts__text Україна, Київ-004, вул. Дарвіна, 2,<br>Палац дітей та юнацтва <br>Печерського району
+                            .contacts-about
+                                h5.contacts__title Контакти:
+                                a.contacts__text(href="tel:+38 (044) 331 43 29") +38 (044) 331 43 29
+                                a.contacts__text(href="tel:+38 (067) 915 99 90") +38 (067) 915 99 90
+                                a.contacts__text(href="mailto:Shchedryk@gmail.com") Shchedryk@gmail.com
+                        .contacts-map
+                            img.contacts-map__img(src="./img/map.png", alt="", srcset="")
+        include footer.pug
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js')
+        script(src="./js/main.js")
