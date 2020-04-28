@@ -284,7 +284,7 @@ main {
     color: #000000;
     font-size: 20px; }
   .award .awards {
-    width: 30.3%; }
+    width: 33.3%; }
     .award .awards:last-child .awards__text {
       border-right: none; }
     .award .awards__title {
@@ -292,10 +292,11 @@ main {
       font-size: 65px;
       color: #C4C4C4;
       text-align: center;
-      margin-bottom: 20px;
       max-width: 335px;
-      width: 100%; }
+      width: 100%;
+      margin: 20px auto; }
     .award .awards__text {
+      margin: 0 auto;
       padding-right: 30px;
       max-width: 335px;
       width: 100%;
@@ -304,7 +305,17 @@ main {
       font-size: 22px;
       text-align: center;
       line-height: 29px;
-      border-right: 1px solid #848181; }
+      position: relative; }
+      .award .awards__text:after {
+        content: '';
+        display: block;
+        width: 155px;
+        height: 1px;
+        background-color: #848181;
+        transform: rotate(90deg);
+        position: absolute;
+        top: 75px;
+        right: -70px; }
   .award .section-title {
     color: #000000;
     text-align: center; }
@@ -342,7 +353,7 @@ main {
   .article:hover {
     transform: scale(1.1); }
   .article-section {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     padding: 0 20px  0 30px; }
   .article figure {
     width: 300px;
@@ -366,7 +377,8 @@ main {
        object-fit: contain;
     -o-object-position: center;
        object-position: center;
-    max-width: 100%; }
+    width: 100%;
+    height: 100%; }
   .article__date {
     position: relative;
     top: -10px;
@@ -384,7 +396,8 @@ main {
     font-family: 'Gilroy-Regular';
     font-size: 20px;
     line-height: 23px;
-    color: #848181; }
+    color: #848181;
+    min-height: 150px; }
   .article .btn-article {
     color: #8F0303;
     margin-left: auto;
@@ -566,6 +579,8 @@ main {
 
 .about-press {
   padding: 50px 0; }
+  .about-press .container {
+    padding: 0 90px; }
   .about-press .section-title {
     color: #000000;
     text-align: center; }
