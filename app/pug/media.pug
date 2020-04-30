@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="./css/main.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/ajax-loader.gif")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.eot")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.ttf")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.woff")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.svg")
+        title Медіа
+    body
+        include header.pug
+        main.container.media
+            section.media__archive.section
+                h6.section-title.section-title-black.center Архів фотографій
+                .media__archive__content
+                    .media__archive__content__years
+                        each val, index in [2020, 2019, 2018, 2017, 2016, 2015]
+                            span(class=index ? 'media__archive__content__years__item' : 'media__archive__content__years__item media__archive__content__years__item-active')=val
+                    .media__archive__content__photos
+                        .media__archive__content__photos__slider
+                            img(src="https://hungary.mfa.gov.ua/storage/app/uploads/public/5df/2df/d89/5df2dfd892a33806183584.jpg")
+                            img(src="https://static.ukrinform.com/photos/2019_07/thumb_files/630_360_1562593246-984.jpg")
+                            img(src="https://i.ytimg.com/vi/mRaxb4HLhsw/maxresdefault.jpg")
+                            img(src="https://novyny.org/wp-content/uploads/2019/07/cropped-SCL-243klein.jpg")
+                            img(src="https://www.ufest.in.ua/images/common/1/0/3/6/4/1/5c367e396e1ab.jpg")
+                            img(src="https://womo.ua/wp-content/uploads/2016/03/12039748_994876960560825_2052831705818175456_n.jpg")
+                            img(src="https://m.day.kyiv.ua/sites/default/files/main/articles/09082019/24hor2.jpg")
+                        .media__archive__content__photos__navigation
+
+            section.media__discography.section
+                h6.section-title.section-title-black.center Дискографія
+                .media__discography__items
+                    each val in [1, 2, 3, 4, 5]
+                        .media__discography__item.media__discography__item-closed
+                            span.media__discography__item__toggler.media__discography__item__toggler-open &#8744;
+                            span.media__discography__item__toggler.media__discography__item__toggler-close &#10005;
+
+                            .media__discography__item__info
+                                img(src="https://market.interra.ru/media/product/pic/9f309fdc-70ad-11e9-bd41-00505693338e.JPG")
+                                div
+                                    h6 Оливье Мессиан. Три маленькие литургии
+                                    p «Три маленьие литургии» для хора, фортепиано, челесты, вибрафона, волн Мартено, ударных и струнного оркестра, написаны Мессианом в 1944 году. <br /><br /> Автор, переживший до этого ужасы гитлеровского концлагеря , создал произведения удивительной свежести, напоенного ощущением свободы и света, слияния с природой и радости бытия.
+
+                            .media__discography__item__audios
+                                each val in ['Presque vif, avec une grande joie', 'Presque vif, avec une grande joie', 'Presque vif, avec une grande joie', 'Presque vif, avec une grande joie']
+                                    h5.audio-name= val
+                                    audio(controls)
+                                        source(src="http://geralex.site/media/audio/brain-music.mp3")
+                                        p Your browser doesn't support the audio tag
+
+
+        include footer.pug
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js')
+        script(src="./js/main.js")
