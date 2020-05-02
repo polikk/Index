@@ -79,11 +79,25 @@ html {
   min-height: 100%; }
 
 body {
-  height: 100%; }
+  height: 100%;
+  font-family: 'Gilroy-Regular'; }
 
 main {
   padding-top: 100px;
   padding-bottom: 140px; }
+
+audio {
+  outline: none;
+  display: block;
+  width: 100%;
+  margin-bottom: 12px; }
+
+.audio-name {
+  font-size: 25px;
+  margin-bottom: 16px; }
+
+.section {
+  margin-top: 48px; }
 
 .container {
   max-width: 1170px;
@@ -100,6 +114,9 @@ main {
   text-align: center;
   font-family: 'Gilroy-Medium';
   font-size: 15px; }
+
+.center {
+  text-align: center; }
 
 .header {
   background: #FFFFFF;
@@ -253,6 +270,8 @@ main {
   color: #FFFFFF;
   font-family: 'Gilroy-Medium';
   font-size: 35px; }
+  .section-title-black {
+    color: black; }
 
 .btn-about {
   position: relative;
@@ -284,6 +303,10 @@ main {
     color: #000000;
     font-size: 20px; }
   .award .awards {
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
     max-width: 335px; }
     .award .awards:nth-child(2) .awards__text:after {
       content: '';
@@ -305,23 +328,53 @@ main {
       position: absolute;
       top: 75px;
       left: -110px; }
+<<<<<<< Updated upstream
+=======
+=======
+    width: 30.3%; }
+    .award .awards:last-child .awards__text {
+      border-right: none; }
+>>>>>>> 8f11482b3dec802ffa75aa366b61409418ec6e0c
+>>>>>>> Stashed changes
     .award .awards__title {
       font-family: 'Gilroy-Bold';
       font-size: 65px;
       color: #C4C4C4;
       text-align: center;
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
       width: 100%;
       margin: 20px auto; }
     .award .awards__text {
       margin: 0 auto;
       padding: 0 15px;
+<<<<<<< Updated upstream
+=======
+=======
+      margin-bottom: 20px;
+      max-width: 335px;
+      width: 100%; }
+    .award .awards__text {
+      padding-right: 30px;
+      max-width: 335px;
+>>>>>>> 8f11482b3dec802ffa75aa366b61409418ec6e0c
+>>>>>>> Stashed changes
       width: 100%;
       color: #848181;
       font-family: 'Gilroy-Regular';
       font-size: 22px;
       text-align: center;
       line-height: 29px;
+<<<<<<< HEAD
       position: relative; }
+<<<<<<< Updated upstream
+=======
+=======
+      border-right: 1px solid #848181; }
+>>>>>>> 8f11482b3dec802ffa75aa366b61409418ec6e0c
+>>>>>>> Stashed changes
   .award .section-title {
     color: #000000;
     text-align: center; }
@@ -359,7 +412,7 @@ main {
   .article:hover {
     transform: scale(1.1); }
   .article-section {
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     padding: 0 20px  0 30px; }
   .article figure {
     width: 300px;
@@ -383,8 +436,7 @@ main {
        object-fit: contain;
     -o-object-position: center;
        object-position: center;
-    width: 100%;
-    height: 100%; }
+    max-width: 100%; }
   .article__date {
     position: relative;
     top: -10px;
@@ -402,8 +454,7 @@ main {
     font-family: 'Gilroy-Regular';
     font-size: 20px;
     line-height: 23px;
-    color: #848181;
-    min-height: 150px; }
+    color: #848181; }
   .article .btn-article {
     color: #8F0303;
     margin-left: auto;
@@ -602,8 +653,6 @@ main {
 
 .about-press {
   padding: 50px 0; }
-  .about-press .container {
-    padding: 0 90px; }
   .about-press .section-title {
     color: #000000;
     text-align: center; }
@@ -806,3 +855,126 @@ main {
     flex-direction: column; }
     .full-news .news-card .article {
       margin-right: 0; }
+
+.media__archive__content {
+  display: flex;
+  align-items: flex-start;
+  height: 376px;
+  margin-top: 24px; }
+  .media__archive__content__years {
+    display: flex;
+    flex-direction: column;
+    width: 156px;
+    margin-right: 24px; }
+    .media__archive__content__years__item {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      width: 100%;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-bottom: 8px;
+      font-size: 20px; }
+      .media__archive__content__years__item-active {
+        background-color: #B6251D;
+        color: white; }
+  .media__archive__content__photos {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: calc(100% - 156px);
+    height: 100%; }
+    .media__archive__content__photos__slider {
+      position: relative;
+      height: 85%;
+      padding: 20px; }
+      .media__archive__content__photos__slider div {
+        height: 100%; }
+      .media__archive__content__photos__slider .slick-prev {
+        left: 40%;
+        top: 324px; }
+        .media__archive__content__photos__slider .slick-prev::before {
+          content: url(../img/left.svg); }
+      .media__archive__content__photos__slider .slick-next {
+        top: 324px;
+        right: 40%; }
+        .media__archive__content__photos__slider .slick-next::before {
+          content: url(../img/right.svg); }
+    .media__archive__content__photos__navigation {
+      text-align: center;
+      font-size: 25px;
+      line-height: 29px;
+      color: #848181; }
+    .media__archive__content__photos img {
+      height: 100%;
+      width: 300px;
+      -o-object-fit: cover;
+         object-fit: cover; }
+
+.media__discography__items {
+  margin-top: 36px; }
+
+.media__discography__item {
+  height: 100px;
+  padding: 8px 12px;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 12px;
+  transition: 0.2s;
+  position: relative; }
+  .media__discography__item__toggler {
+    position: absolute;
+    right: 32px;
+    top: 12px;
+    color: #848181;
+    padding: 10px;
+    transition: 0.2s;
+    cursor: pointer; }
+    .media__discography__item__toggler:hover {
+      color: black; }
+    .media__discography__item__toggler-open {
+      font-size: 48px; }
+    .media__discography__item__toggler-close {
+      font-size: 36px; }
+  .media__discography__item-closed img {
+    width: 95px;
+    height: 80px; }
+  .media__discography__item-closed p {
+    display: none; }
+  .media__discography__item-closed .media__discography__item__audios {
+    display: none; }
+  .media__discography__item-closed .media__discography__item__toggler-close {
+    display: none; }
+  .media__discography__item-closed .media__discography__item__toggler-open {
+    display: inline-block; }
+  .media__discography__item-opened {
+    padding: 32px;
+    height: 784px;
+    overflow: hidden; }
+    .media__discography__item-opened img {
+      width: 268px;
+      height: 268px; }
+    .media__discography__item-opened p {
+      display: inline-block; }
+    .media__discography__item-opened .media__discography__item__audios {
+      display: block; }
+    .media__discography__item-opened .media__discography__item__toggler-close {
+      display: inline-block; }
+    .media__discography__item-opened .media__discography__item__toggler-open {
+      display: none; }
+  .media__discography__item__info {
+    display: flex; }
+    .media__discography__item__info img {
+      margin-right: 24px;
+      transition: 0.2s; }
+    .media__discography__item__info h6 {
+      font-size: 25px;
+      padding-top: 32px; }
+    .media__discography__item__info p {
+      white-space: normal;
+      color: #848181;
+      font-size: 15px;
+      margin-top: 12px;
+      line-height: 1.4; }
+  .media__discography__item__audios {
+    margin-top: 36px; }
