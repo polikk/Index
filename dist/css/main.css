@@ -79,25 +79,11 @@ html {
   min-height: 100%; }
 
 body {
-  height: 100%;
-  font-family: 'Gilroy-Regular'; }
+  height: 100%; }
 
 main {
   padding-top: 100px;
   padding-bottom: 140px; }
-
-audio {
-  outline: none;
-  display: block;
-  width: 100%;
-  margin-bottom: 12px; }
-
-.audio-name {
-  font-size: 25px;
-  margin-bottom: 16px; }
-
-.section {
-  margin-top: 48px; }
 
 .container {
   max-width: 1170px;
@@ -114,9 +100,6 @@ audio {
   text-align: center;
   font-family: 'Gilroy-Medium';
   font-size: 15px; }
-
-.center {
-  text-align: center; }
 
 .header {
   background: #FFFFFF;
@@ -270,8 +253,6 @@ audio {
   color: #FFFFFF;
   font-family: 'Gilroy-Medium';
   font-size: 35px; }
-  .section-title-black {
-    color: black; }
 
 .btn-about {
   position: relative;
@@ -303,27 +284,44 @@ audio {
     color: #000000;
     font-size: 20px; }
   .award .awards {
-    width: 30.3%; }
-    .award .awards:last-child .awards__text {
-      border-right: none; }
+    max-width: 335px; }
+    .award .awards:nth-child(2) .awards__text:after {
+      content: '';
+      display: block;
+      width: 155px;
+      height: 1px;
+      background-color: #848181;
+      transform: rotate(90deg);
+      position: absolute;
+      top: 75px;
+      right: -110px; }
+    .award .awards:nth-child(2) .awards__text::before {
+      content: '';
+      display: block;
+      width: 155px;
+      height: 1px;
+      background-color: #848181;
+      transform: rotate(90deg);
+      position: absolute;
+      top: 75px;
+      left: -110px; }
     .award .awards__title {
       font-family: 'Gilroy-Bold';
       font-size: 65px;
       color: #C4C4C4;
       text-align: center;
-      margin-bottom: 20px;
-      max-width: 335px;
-      width: 100%; }
+      width: 100%;
+      margin: 20px auto; }
     .award .awards__text {
-      padding-right: 30px;
-      max-width: 335px;
+      margin: 0 auto;
+      padding: 0 15px;
       width: 100%;
       color: #848181;
       font-family: 'Gilroy-Regular';
       font-size: 22px;
       text-align: center;
       line-height: 29px;
-      border-right: 1px solid #848181; }
+      position: relative; }
   .award .section-title {
     color: #000000;
     text-align: center; }
@@ -361,7 +359,7 @@ audio {
   .article:hover {
     transform: scale(1.1); }
   .article-section {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     padding: 0 20px  0 30px; }
   .article figure {
     width: 300px;
@@ -385,7 +383,8 @@ audio {
        object-fit: contain;
     -o-object-position: center;
        object-position: center;
-    max-width: 100%; }
+    width: 100%;
+    height: 100%; }
   .article__date {
     position: relative;
     top: -10px;
@@ -403,7 +402,8 @@ audio {
     font-family: 'Gilroy-Regular';
     font-size: 20px;
     line-height: 23px;
-    color: #848181; }
+    color: #848181;
+    min-height: 150px; }
   .article .btn-article {
     color: #8F0303;
     margin-left: auto;
@@ -565,10 +565,27 @@ audio {
     max-width: 996px;
     width: 100%;
     margin: 40px auto; }
-  .about-main__image img {
+  .about-main__image {
     max-width: 100%;
-    -o-object-fit: contain;
-       object-fit: contain; }
+    max-height: 549px;
+    position: relative; }
+    .about-main__image::after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 420px;
+      width: 100%;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 5;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 78.65%, #FFFFFF 98.96%); }
+    .about-main__image img {
+      max-width: 100%;
+      -o-object-fit: contain;
+         object-fit: contain;
+      -o-object-position: center;
+         object-position: center; }
   .about-main__text {
     font-family: 'Gilroy-Regular';
     color: #848181;
@@ -585,6 +602,8 @@ audio {
 
 .about-press {
   padding: 50px 0; }
+  .about-press .container {
+    padding: 0 90px; }
   .about-press .section-title {
     color: #000000;
     text-align: center; }
@@ -596,7 +615,7 @@ audio {
       background-color: #848181;
       margin: 25px auto; }
     .about-press .press-slider__card blockquote {
-      margin: 0 10px;
+      margin: 0 30px;
       width: 270px;
       padding: 12px 10px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
@@ -635,18 +654,17 @@ audio {
 .about-details {
   padding: 60px 0; }
   .about-details .festival {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around; }
-    .about-details .festival ul {
+    padding: 0 87px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: .5em; }
+    .about-details .festival li {
+      list-style: disc;
       font-family: 'Gilroy-Regular';
       font-size: 18px;
       line-height: 31px;
-      color: #848181;
-      max-width: 434px;
-      margin-left: 65px; }
-      .about-details .festival ul li {
-        list-style: disc; }
+      color: #848181; }
 
 .about-famous {
   padding: 30px 0;
@@ -664,6 +682,7 @@ audio {
   .about-famous .slick-slide.slick-current.slick-active.slick-center .famous-card {
     height: 320px; }
   .about-famous .slick-slide.slick-current.slick-active.slick-center blockquote {
+    margin-left: -80px;
     height: 300px;
     position: absolute;
     background-color: #FFFFFF;
@@ -700,6 +719,9 @@ audio {
       top: 0;
       bottom: 0;
       background: linear-gradient(0deg, rgba(196, 196, 196, 0.8), rgba(196, 196, 196, 0.8)); }
+    .about-famous blockquote figure img {
+      max-width: 137px;
+      max-height: 137px; }
     .about-famous blockquote figcaption {
       font-size: 15px;
       line-height: 17px;
@@ -711,7 +733,9 @@ audio {
       font-size: 25px;
       line-height: 29px;
       font-family: 'Gilroy-Regular';
-      color: #000000; }
+      color: #000000;
+      text-align: center;
+      display: block; }
   .about-famous .pagingInfo {
     display: block;
     text-align: center;
@@ -726,7 +750,7 @@ audio {
       content: url(../img/left.svg); }
   .about-famous .slick-next {
     top: 350px;
-    right: 500px; }
+    right: 520px; }
     .about-famous .slick-next::before {
       content: url(../img/right.svg); }
 
@@ -782,126 +806,3 @@ audio {
     flex-direction: column; }
     .full-news .news-card .article {
       margin-right: 0; }
-
-.media__archive__content {
-  display: flex;
-  align-items: flex-start;
-  height: 376px;
-  margin-top: 24px; }
-  .media__archive__content__years {
-    display: flex;
-    flex-direction: column;
-    width: 156px;
-    margin-right: 24px; }
-    .media__archive__content__years__item {
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      width: 100%;
-      height: 56px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      margin-bottom: 8px;
-      font-size: 20px; }
-      .media__archive__content__years__item-active {
-        background-color: #B6251D;
-        color: white; }
-  .media__archive__content__photos {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: calc(100% - 156px);
-    height: 100%; }
-    .media__archive__content__photos__slider {
-      position: relative;
-      height: 85%;
-      padding: 20px; }
-      .media__archive__content__photos__slider div {
-        height: 100%; }
-      .media__archive__content__photos__slider .slick-prev {
-        left: 40%;
-        top: 324px; }
-        .media__archive__content__photos__slider .slick-prev::before {
-          content: url(../img/left.svg); }
-      .media__archive__content__photos__slider .slick-next {
-        top: 324px;
-        right: 40%; }
-        .media__archive__content__photos__slider .slick-next::before {
-          content: url(../img/right.svg); }
-    .media__archive__content__photos__navigation {
-      text-align: center;
-      font-size: 25px;
-      line-height: 29px;
-      color: #848181; }
-    .media__archive__content__photos img {
-      height: 100%;
-      width: 300px;
-      -o-object-fit: cover;
-         object-fit: cover; }
-
-.media__discography__items {
-  margin-top: 36px; }
-
-.media__discography__item {
-  height: 100px;
-  padding: 8px 12px;
-  width: 100%;
-  background: white;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-bottom: 12px;
-  transition: 0.2s;
-  position: relative; }
-  .media__discography__item__toggler {
-    position: absolute;
-    right: 32px;
-    top: 12px;
-    color: #848181;
-    padding: 10px;
-    transition: 0.2s;
-    cursor: pointer; }
-    .media__discography__item__toggler:hover {
-      color: black; }
-    .media__discography__item__toggler-open {
-      font-size: 48px; }
-    .media__discography__item__toggler-close {
-      font-size: 36px; }
-  .media__discography__item-closed img {
-    width: 95px;
-    height: 80px; }
-  .media__discography__item-closed p {
-    display: none; }
-  .media__discography__item-closed .media__discography__item__audios {
-    display: none; }
-  .media__discography__item-closed .media__discography__item__toggler-close {
-    display: none; }
-  .media__discography__item-closed .media__discography__item__toggler-open {
-    display: inline-block; }
-  .media__discography__item-opened {
-    padding: 32px;
-    height: 784px;
-    overflow: hidden; }
-    .media__discography__item-opened img {
-      width: 268px;
-      height: 268px; }
-    .media__discography__item-opened p {
-      display: inline-block; }
-    .media__discography__item-opened .media__discography__item__audios {
-      display: block; }
-    .media__discography__item-opened .media__discography__item__toggler-close {
-      display: inline-block; }
-    .media__discography__item-opened .media__discography__item__toggler-open {
-      display: none; }
-  .media__discography__item__info {
-    display: flex; }
-    .media__discography__item__info img {
-      margin-right: 24px;
-      transition: 0.2s; }
-    .media__discography__item__info h6 {
-      font-size: 25px;
-      padding-top: 32px; }
-    .media__discography__item__info p {
-      white-space: normal;
-      color: #848181;
-      font-size: 15px;
-      margin-top: 12px;
-      line-height: 1.4; }
-  .media__discography__item__audios {
-    margin-top: 36px; }
