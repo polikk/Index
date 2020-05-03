@@ -998,3 +998,9 @@ audio {
 .footer-colum li {
   margin: 9px 0;
 }
+.bg-right {
+  padding: 40px 0 120px;
+  background-image: url(../img/big-bg.png);
+  background-repeat: no-repeat;
+  background-position-x: 78%;
+  background-position-y: center; }
