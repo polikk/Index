@@ -297,14 +297,7 @@ audio {
         justify-content: space-between;
         align-items: start;
         flex-wrap: wrap; }
-      .award__btn {
-        max-width: 190px;
-        margin: 0 auto;
-        color: #000000;
-        font-size: 20px; }
-      .award .awards {
-        max-width: 335px; }
-        .award .awards:nth-child(2) .awards__text:after {
+        .award-wrap :nth-child(3n+2) .awards__text:after {
           content: '';
           display: block;
           width: 155px;
@@ -314,7 +307,7 @@ audio {
           position: absolute;
           top: 75px;
           right: -110px; }
-        .award .awards:nth-child(2) .awards__text::before {
+        .award-wrap :nth-child(3n+2) .awards__text::before {
           content: '';
           display: block;
           width: 155px;
@@ -324,6 +317,14 @@ audio {
           position: absolute;
           top: 75px;
           left: -110px; }
+      .award__btn {
+        max-width: 190px;
+        margin: 0 auto;
+        color: #000000;
+        font-size: 20px; }
+      .award .awards {
+        max-width: 335px; }
+       
         .award .awards__title {
           font-family: 'Gilroy-Bold';
           font-size: 65px;
@@ -789,13 +790,14 @@ audio {
       .full-news .big-news-card figure {
         max-width: 800px;
         width: 100%;
-        max-height: 420px; }
+        height: 420px; }
         .full-news .big-news-card figure img {
-          max-width: 100%;
-          -o-object-fit: contain;
-             object-fit: contain;
-          -o-object-position: center;
-             object-position: center; }
+          width: 100%;
+      height: 100%;
+      -o-object-fit: contain;
+         object-fit: contain;
+      -o-object-position: center;
+         object-position: center; }
       .full-news .big-news-card .news-card-date {
         text-align: end;
         font-size: 25px;
