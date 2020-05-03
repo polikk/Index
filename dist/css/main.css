@@ -399,8 +399,8 @@ audio {
           right: 0;
           left: 0; }
       .article__img {
-        -o-object-fit: contain;
-           object-fit: contain;
+        -o-object-fit: cover;
+           object-fit: cover;
         -o-object-position: center;
            object-position: center;
         width: 100%;
@@ -471,6 +471,9 @@ audio {
     
     .community {
       padding: 60px 0; }
+      .community a {
+        outline: none;
+        cursor: pointer; }
       .community .slick-prev {
         left: 0;
         z-index: 2; }
@@ -489,6 +492,7 @@ audio {
       .community__img {
         -o-object-fit: scale-down;
            object-fit: scale-down;
+           margin: 0 auto;
         height: 100px; }
     
     .contacts {
@@ -621,12 +625,22 @@ audio {
         background-color: #848181; }
     
     .about-press {
-      padding: 50px 0; }
+      padding: 0 0 50px;}
       .about-press .container {
         padding: 0 90px; }
       .about-press .section-title {
         color: #000000;
         text-align: center; }
+        .about-press .slick-prev {
+          left: -40px;
+          z-index: 2; }
+          .about-press .slick-prev:before {
+            content: url(../img/left.svg); }
+        .about-press .slick-next {
+          right: -20px;
+          z-index: 2; }
+          .about-press .slick-next:before {
+            content: url(../img/right.svg); }
       .about-press .press-slider__card {
         padding: 30px 0; }
         .about-press .press-slider__card .press-slider__line {
@@ -669,7 +683,7 @@ audio {
           color: #848181; }
     
     .about-award .award-wrap:last-child {
-      margin: 80px 0; }
+      margin: 40px 0; }
     
     .about-details {
       padding: 60px 0; }
