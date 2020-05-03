@@ -422,7 +422,7 @@ audio {
         }
     }
     &__img{
-        object-fit:contain;
+        object-fit:cover;
         object-position: center;
         width: 100%;
         height: 100%;
@@ -510,6 +510,10 @@ audio {
 }
 .community{
     padding: 60px 0 ;
+    a{
+        outline: none;
+        cursor: pointer;
+    }
     .slick-prev{
         left: 0;
         z-index: 2;
@@ -534,6 +538,7 @@ audio {
     &__img{
         object-fit: scale-down;
         height: 100px;
+        margin: 0 auto;
     }
 }
 .contacts{
@@ -695,7 +700,22 @@ audio {
     }
 }
 .about-press{
-    padding: 50px 0;
+    padding: 0 0 50px;
+    .slick-prev{
+        left: -40px;
+        z-index: 2;
+        
+        &:before{
+            content: url(../img/left.svg);
+        }
+    }
+    .slick-next{
+        right: -20px;
+        z-index: 2;
+        &:before{
+            content: url(../img/right.svg);
+        }
+    }
     .container{
         padding: 0 90px;
     }
