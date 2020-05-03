@@ -681,7 +681,8 @@ audio {
           text-align: center;
           font-family: 'Gilroy-Regular';
           color: #848181; }
-    
+    .about-award{padding: 50px 0 0;}
+	.about-award .awards{ margin: 20px 0;}
     .about-award .award-wrap:last-child {
       margin: 40px 0; }
     
