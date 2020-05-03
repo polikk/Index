@@ -419,6 +419,12 @@ audio {
         color: #000000;
         margin-bottom: 12px; }
       .article__text {
+	text-overflow: ellipsis;
+    	width: 250px;
+    	height: 68px;
+    	overflow-wrap: break-word;
+    	overflow: hidden;
+    	word-break: break-all;
         font-family: 'Gilroy-Regular';
         font-size: 20px;
         line-height: 23px;
