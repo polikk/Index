@@ -43,6 +43,7 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
   var i = (currentSlide ? currentSlide : 0) + 1;
   $status.text(i + '/' + slick.slideCount);
 }); // MEDIA page
+// discogrphy
 
 var discographyOpenTogglers = document.querySelectorAll('.media__discography__item__toggler-open');
 var TOGGLE_DISCOGRAPHY_CLASSES = {
@@ -63,7 +64,8 @@ discographyCloseTogglers.forEach(function (toggler) {
     discography.classList.remove(TOGGLE_DISCOGRAPHY_CLASSES.opened);
     discography.classList.add(TOGGLE_DISCOGRAPHY_CLASSES.closed);
   });
-});
+}); // archive slider
+
 var archiveSlider = $('.media__archive__content__photos__slider');
 var SLIDE_TO_SHOW = 3;
 
@@ -114,4 +116,34 @@ allYears.forEach(function (year) {
     terminateSlider();
     initializeSlider();
   });
+}); // video
+
+var ACTIVE_PREVIEW_CLASS = 'media__video__content__list__preview-active';
+var PREVIEW_CLASS = 'media__video__content__list__preview';
+var PLAYER_ROOT_URL = 'https://www.youtube.com/embed/';
+var previews = document.querySelectorAll(".".concat(PREVIEW_CLASS));
+var player = document.querySelector('.media__video__content__player');
+
+var setPlayerSrc = function setPlayerSrc(id) {
+  player.setAttribute('src', "".concat(PLAYER_ROOT_URL).concat(id));
+  var currentActivePreview = document.querySelector(".".concat(ACTIVE_PREVIEW_CLASS));
+  ;
+  var futureActivePreview = Array.from(previews).find(function (preview) {
+    return preview.dataset.videoid === id;
+  });
+
+  if (currentActivePreview) {
+    currentActivePreview.classList.remove(ACTIVE_PREVIEW_CLASS);
+  }
+
+  futureActivePreview.classList.add(ACTIVE_PREVIEW_CLASS);
+};
+
+previews.forEach(function (preview) {
+  preview.addEventListener('click', function (e) {
+    var videoid = e.target.dataset.videoid;
+    setPlayerSrc(videoid);
+  });
 });
+var defaultVideo = previews[0].dataset.videoid;
+setPlayerSrc(defaultVideo);
