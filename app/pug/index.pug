@@ -14,7 +14,7 @@ html(lang="en")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.svg")
         title Document
     body
-        include header.pug
+        include partials/header
         main
             section.main
                 .container
@@ -49,30 +49,24 @@ html(lang="en")
                 .container
                     h2.section-title Новини
                     .news-wrap
-                        article.article
-                            figure
-                                img.article__img(src="./img/news.jpeg", alt="", srcset="")
-                            .article-section
-                                span.article__date 09/04
-                                p.article__title Lorem<br> ipsum dolo sit amet,
-                                p.article__text Ut enim ad minim veniam,quis nostrud exercitation ullamc 
-                            a.btn-about.btn-article(href="#") Більше 
-                        article.article
-                            figure
-                                img.article__img(src="./img/news.jpeg", alt="", srcset="")
-                            .article-section
-                                span.article__date 09/04
-                                p.article__title Lorem<br> ipsum dolo sit amet,
-                                p.article__text Ut enim ad minim veniam,quis nostrud exercitation ullamc 
-                            a.btn-about.btn-article(href="#") Більше
-                        article.article
-                            figure
-                                img.article__img(src="./img/news.jpeg", alt="", srcset="")
-                            .article-section
-                                span.article__date 09/04
-                                p.article__title Lorem<br> ipsum dolo sit amet,
-                                p.article__text Ut enim ad minim veniam,quis nostrud exercitation ullamc
-                            a.btn-about.btn-article(href="#") Більше
+                        -
+                            var all_articles = [
+                                {
+                                    img: "./img/news.jpeg",
+                                    name: "Lorem<br> ipsum dolo sit amet",
+                                    text: "Ut enim ad minim veniam,quis nostrud exercitation ullamc"
+                                }, {
+                                    img: "./img/news.jpeg",
+                                    name: "Lorem<br> ipsum dolo sit amet",
+                                    text: "Ut enim ad minim ffffffffffffffffffffffffffffffffffffgjfgjhgfkjhgkghkghkhgkghk,quis nostrud exercitation ullamc"
+                                }, {
+                                    img: "./img/kitten.jpg",
+                                    name: "Lorem<br> ipsum dolo sit amet",
+                                    text: "Ut enim ad minim veniam,quis nostrud exercitation ullamc"
+                                },
+                            ]
+                        each art in all_articles
+                            include partials/article-tile
                     a.btn-about.news__btn(href='#')  Більше новин
             section.family
                 .container
@@ -87,7 +81,7 @@ html(lang="en")
                 .container
                     .family-wrap
                         h2.section-title Бажаєте почути виступ хору Щедрик?
-                        button.btn Запросити
+                        a(href="http://").btn Запросити
             section.community  
                 .container
                     h2.section-title Спільнота
@@ -118,7 +112,7 @@ html(lang="en")
                                 a.contacts__text(href="mailto:Shchedryk@gmail.com") Shchedryk@gmail.com
                         .contacts-map
                             img.contacts-map__img(src="./img/map.png", alt="", srcset="")
-        include footer.pug
+        include partials/footer
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
         script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js')
         script(src="./js/main.js")

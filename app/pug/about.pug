@@ -14,7 +14,7 @@ html(lang="en")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.svg")
         title Document
     body
-        include header.pug
+        include partials/header
         main
             section.about-main
                 .container
@@ -85,6 +85,7 @@ html(lang="en")
             section.about-details
                 .container  
                     p.about-main__text У репертуарі хору — ренесансна, барочна та класична музика, обробки пісень народів світу, твори сучасних композиторів.
+                    p.about-main__line
                     p.about-main__text Щедрик брав участь у таких престижних українських і світових музичних фестивалях, як:
                     .festival
                         li «America Fest» у Де-Мойні (США), 1992
@@ -104,6 +105,7 @@ html(lang="en")
                         li  Фестиваль української музики «Rethinking Europe — Stop One: Ukraine» у Стокгольмі (Швеція), 2017
                         li VII Міжнародний фестиваль оркестрових і хорових колективів у Флоренції (Італія), 2018
                         li XIII “Summa Cum Laude” International Youth Music Festival у Відні (Австрія), 2019
+                    p.about-main__line
                     p.about-main__text Почесне місце у дискографії займає запис твору «Три маленькі літургії Божественної присутності» О. Мессіана, виконаного «Щедриком» разом з оркестром «Кремерата Балтика» під керуванням Р. Кофмана, що ввійшов до збірки кращих концертів в історії «Фестивалю камерної музики Ґідона Кремера». 
             section.about-famous
                 .container
@@ -142,7 +144,7 @@ html(lang="en")
                                     cite  Ґія Канчелі
                                 .famous-text «Дитячі хори існують у багатьох країнах, але „Щедрик“ — явище особливе через те, що ґрунтується на неповторних хорових традиціях, закладених Іриною Сабліною й успішно продовжених її дочкою Маріанною Сабліною. Завдяки їм „Щедрик“ і став явищем унікальним».
                     span.pagingInfo
-        include footer.pug
+        include partials/footer
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
         script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js')
         script(src="./js/main.js")

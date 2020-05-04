@@ -21,6 +21,7 @@ $('.main-info').slick({
     infinite: true,
     autoplay: true,
     autoplaySpeed: 2000,
+    swipeToSlide: true,
     speed: 300,
     slidesToShow: 3,
     adaptiveHeight: true
@@ -30,11 +31,24 @@ $('.famuous-slider').slick({
   centerMode: true,
   centerPadding: '10px',
   slidesToShow: 3,
-  //infinite: true,
+  infinite: true,
+  swipeToSlide: true,
   speed: 300,
   autoplay: true,
   autoplaySpeed: 3000,
   adaptiveHeight: true,
+});
+$('.news-slider').slick({
+  dots: true,
+  infinite: true,
+  //autoplay: true,
+  prevArrow: false,
+  nextArrow: false,
+  autoplaySpeed: 2000,
+  swipeToSlide: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true
 });
 var $status = $('.pagingInfo');
 var $slickElement = $('.famuous-slider');
@@ -47,7 +61,7 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
 
 
 // MEDIA page
-
+  // discogrphy
 const discographyOpenTogglers = document.querySelectorAll('.media__discography__item__toggler-open');
 const TOGGLE_DISCOGRAPHY_CLASSES = {
   opened: 'media__discography__item-opened',
@@ -74,6 +88,8 @@ discographyCloseTogglers.forEach((toggler) => {
     discography.classList.add(TOGGLE_DISCOGRAPHY_CLASSES.closed);
   });
 });
+
+// archive slider
 
 const archiveSlider = $('.media__archive__content__photos__slider');
 const SLIDE_TO_SHOW = 3;
@@ -136,3 +152,37 @@ allYears.forEach((year) => {
     initializeSlider();
   });
 });
+
+// video
+
+const ACTIVE_PREVIEW_CLASS = 'media__video__content__list__preview-active';
+const PREVIEW_CLASS = 'media__video__content__list__preview';
+const PLAYER_ROOT_URL = 'https://www.youtube.com/embed/';
+
+const previews = document.querySelectorAll(`.${PREVIEW_CLASS}`);
+const player = document.querySelector('.media__video__content__player');
+
+const setPlayerSrc = (id) => {
+  player.setAttribute('src', `${PLAYER_ROOT_URL}${id}`);
+  
+  const currentActivePreview = document.querySelector(`.${ACTIVE_PREVIEW_CLASS}`);;
+  const futureActivePreview = Array.from(previews).find((preview) => preview.dataset.videoid === id);
+
+  if (currentActivePreview) {
+    currentActivePreview.classList.remove(ACTIVE_PREVIEW_CLASS);
+  }
+
+  futureActivePreview.classList.add(ACTIVE_PREVIEW_CLASS);
+};
+
+previews.forEach((preview) => {
+  preview.addEventListener('click', (e) => {
+    const { videoid } = e.target.dataset;
+
+    setPlayerSrc(videoid);
+  });
+});
+
+const defaultVideo = previews[0].dataset.videoid;
+
+setPlayerSrc(defaultVideo);
