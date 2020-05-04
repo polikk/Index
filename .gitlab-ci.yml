@@ -1,0 +1,36 @@
+# This file is a template, and might need editing before it works on your project.
+# Full project: https://gitlab.com/pages/plain-html
+stages:
+  - build
+  - deploy
+
+build:
+  image: node:10
+  stage: build
+  script:
+    - 'time npm i --prefer-offline'
+    - 'echo building...'
+    - 'time npm run build'
+  cache:
+    key: 'node_chache'
+    paths:
+      - 'node_modules'
+  artifacts:
+    paths:
+      - dist
+
+pages:
+  stage: deploy
+  script:
+    - mkdir .public
+    - cp -r dist/* .public
+    - mv .public public
+  artifacts:
+    paths:
+      - public
+
+  dependencies:
+    - build
+
+  only:
+    - master
