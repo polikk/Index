@@ -150,6 +150,7 @@ const player = document.querySelector('.media__video__content__player');
 
 const setPlayerSrc = (id) => {
   player.setAttribute('src', `${PLAYER_ROOT_URL}${id}`);
+  
   const currentActivePreview = document.querySelector(`.${ACTIVE_PREVIEW_CLASS}`);;
   const futureActivePreview = Array.from(previews).find((preview) => preview.dataset.videoid === id);
 
