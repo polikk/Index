@@ -14,7 +14,7 @@ html(lang="en")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.svg")
         title Медіа
     body
-        include header.pug
+        include partials/header
         main.media
             section.container.section.media__archive
                 h6.section-title.section-title-black.center Архів фотографій
@@ -67,7 +67,7 @@ html(lang="en")
                                         p Your browser doesn't support the audio tag
 
 
-        include footer.pug
+        include partials/footer
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
         script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js')
         script(src="./js/main.js")

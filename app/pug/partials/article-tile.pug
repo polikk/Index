@@ -1,0 +1,16 @@
+-
+    if (art === undefined)
+        art = {
+            img: "./img/news.jpeg",
+            name: "Lorem<br> ipsum dolo sit amet",
+            text: "Ut enim ad minim veniam,quis nostrud exercitation ullamc"
+        }
+
+article.article
+    figure
+        img.article__img(src=art.img, alt="", srcset="")
+    .article-section
+        span.article__date 09/04
+        p.article__title !{art.name}
+        p.article__text !{art.text}
+    a.btn-about.btn-article(href="new.html") Більше
