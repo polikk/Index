@@ -42,34 +42,28 @@ table {
   border-spacing: 0; }
 
 @font-face {
-  font-family: "Gilroy-Bold";
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/Gilroy-Bold.eot?") format("eot"), url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.ttf") format("truetype"), url("../fonts/Gilroy-Bold.svg#Gilroy-Bold") format("svg"); }
+  src: url("../fonts/Gilroy-Bold.eot?") format("eot"), url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.ttf") format("truetype"), url("../fonts/Gilroy-Bold.svg#Gilroy") format("svg"); }
 
 @font-face {
-  font-family: "Gilroy-SemiBold";
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/Gilroy-SemiBold.eot?") format("eot"), url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff"), url("../fonts/Gilroy-SemiBold.ttf") format("truetype"), url("../fonts/Gilroy-SemiBold.svg#Gilroy-SemiBold") format("svg"); }
+  src: url("../fonts/Gilroy-SemiBold.eot?") format("eot"), url("../fonts/Gilroy-SemiBold.woff") format("woff"), url("../fonts/Gilroy-SemiBold.ttf") format("truetype"), url("../fonts/Gilroy-SemiBold.svg#Gilroy") format("svg"); }
 
 @font-face {
-  font-family: "Gilroy-Regular";
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Gilroy-Regular.eot?") format("eot"), url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.ttf") format("truetype"), url("../fonts/Gilroy-Regular.svg#Gilroy-Regular") format("svg"); }
+  src: url("../fonts/Gilroy-Regular.eot?") format("eot"), url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.ttf") format("truetype"), url("../fonts/Gilroy-Regular.svg#Gilroy") format("svg"); }
 
 @font-face {
-  font-family: "Gilroy-Medium";
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/Gilroy-Medium.eot?") format("eot"), url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("truetype"), url("../fonts/Gilroy-Medium.svg#Gilroy-Medium") format("svg"); }
-
-@font-face {
-  font-family: "Gilroy-SemiBold";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/Gilroy-SemiBold.eot?") format("eot"), url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff"), url("../fonts/Gilroy-SemiBold.ttf") format("truetype"), url("../fonts/Gilroy-SemiBold.svg#Gilroy-SemiBold") format("svg"); }
+  src: url("../fonts/Gilroy-Medium.eot?") format("eot"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("truetype"), url("../fonts/Gilroy-Medium.svg#Gilroy") format("svg"); }
 
 * {
   box-sizing: border-box; }
@@ -80,7 +74,7 @@ html {
 
 body {
   height: 100%;
-  font-family: 'Gilroy-Regular'; }
+  font-family: 'Gilroy'; }
 
 main {
   padding-top: 100px;
@@ -112,8 +106,10 @@ audio {
   border: none;
   border-radius: 30px;
   text-align: center;
-  font-family: 'Gilroy-Medium';
-  font-size: 15px; }
+  font-family: 'Gilroy';
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none; }
 
 .center {
   text-align: center; }
@@ -152,7 +148,7 @@ audio {
       justify-content: space-between;
       align-items: center; }
     .header .nav__link {
-      font-family: 'Gilroy-Regular';
+      font-family: 'Gilroy';
       color: #848181;
       text-decoration: none; }
       .header .nav__link:hover, .header .nav__link :active {
@@ -199,7 +195,8 @@ audio {
     height: 6px;
     margin-right: 5px; }
   .main__title {
-    font-family: 'Gilroy-Medium';
+    font-family: 'Gilroy';
+    font-weight: 700;
     opacity: 0.75;
     font-size: 50px;
     line-height: 59px;
@@ -209,7 +206,7 @@ audio {
     padding-top: 10px;
     position: relative; }
   .main__subtitle {
-    font-family: 'Gilroy-Medium';
+    font-family: 'Gilroy';
     font-style: italic;
     font-size: 22px;
     line-height: 26px;
@@ -217,8 +214,9 @@ audio {
     opacity: 0.75;
     margin-left: 180px; }
   .main .year {
-    font-family: 'Gilroy-Bold';
+    font-family: 'Gilroy';
     margin-right: 35px;
+    font-weight: 700;
     padding-top: 10px;
     font-size: 13px;
     color: rgba(0, 0, 0, 0.5); }
@@ -239,7 +237,8 @@ audio {
     .main-header__wrap {
       margin: 0 auto; }
   .main__text {
-    font-family: 'Gilroy-Medium';
+    font-family: 'Gilroy';
+    font-weight: 500;
     font-size: 35px;
     line-height: 41px;
     margin-left: 70px;
@@ -268,7 +267,8 @@ audio {
 
 .section-title {
   color: #FFFFFF;
-  font-family: 'Gilroy-Medium';
+  font-family: 'Gilroy';
+  font-weight: 500;
   font-size: 35px; }
   .section-title-black {
     color: black; }
@@ -277,7 +277,8 @@ audio {
   position: relative;
   display: flex;
   align-items: center;
-  font-family: 'Gilroy-Medium';
+  font-family: 'Gilroy';
+  font-weight: 500;
   text-decoration: none; }
   .btn-about::after {
     position: absolute;
@@ -325,7 +326,8 @@ audio {
   .award .awards {
     max-width: 335px; }
     .award .awards__title {
-      font-family: 'Gilroy-Bold';
+      font-weight: 700;
+      font-family: 'Gilroy';
       font-size: 65px;
       color: #C4C4C4;
       text-align: center;
@@ -336,7 +338,7 @@ audio {
       padding: 0 15px;
       width: 100%;
       color: #848181;
-      font-family: 'Gilroy-Regular';
+      font-family: 'Gilroy';
       font-size: 22px;
       text-align: center;
       line-height: 29px;
@@ -377,6 +379,8 @@ audio {
   min-height: 464px; }
   .article:hover {
     transform: scale(1.1); }
+    .article:hover figure::before {
+      bottom: -1px; }
   .article-section {
     margin-bottom: 10px;
     padding: 0 20px  0 30px; }
@@ -408,25 +412,27 @@ audio {
     position: relative;
     top: -10px;
     font-size: 20px;
-    font-family: 'Gilroy-Regular';
+    font-family: 'Gilroy';
     color: #848181;
     z-index: 6; }
   .article__title {
-    font-family: 'Gilroy-SemiBold';
+    font-weight: 700;
+    font-family: 'Gilroy';
     font-size: 25px;
     line-height: 31px;
     color: #000000;
     margin-bottom: 12px; }
   .article__text {
-    font-family: 'Gilroy-Regular';
+    font-family: 'Gilroy';
     font-size: 20px;
     line-height: 23px;
     color: #848181;
     width: 250px;
-    height: 68px;
+    height: 90px;
     overflow-wrap: break-word;
     overflow: hidden;
-    word-break: break-all; }
+    word-break: break-all;
+    margin-bottom: 20px; }
   .article .btn-article {
     color: #8F0303;
     margin-left: auto;
@@ -514,7 +520,8 @@ audio {
       -o-object-fit: cover;
          object-fit: cover; }
   .contacts__title {
-    font-family: 'Gilroy-Medium';
+    font-family: 'Gilroy';
+    font-weight: 500;
     font-size: 30px;
     color: #000000;
     margin-bottom: 15px; }
@@ -524,7 +531,7 @@ audio {
     text-decoration: none;
     display: block;
     color: #000000;
-    font-family: 'Gilroy-Regular'; }
+    font-family: 'Gilroy'; }
   .contacts-about:last-child {
     margin-top: 20px; }
 
@@ -555,7 +562,7 @@ audio {
     flex-direction: column;
     margin-right: 70px; }
   .footer__link {
-    font-family: 'Gilroy-Regular';
+    font-family: 'Gilroy';
     font-size: 18px;
     line-height: 23px;
     text-decoration: none;
@@ -585,7 +592,7 @@ audio {
     color: #000000;
     text-align: center; }
   .about-main__subtitle {
-    font-family: 'Gilroy-Regular';
+    font-family: 'Gilroy';
     color: #848181;
     font-size: 25px;
     line-height: 43px;
@@ -614,7 +621,7 @@ audio {
       -o-object-position: center;
          object-position: center; }
   .about-main__text {
-    font-family: 'Gilroy-Regular';
+    font-family: 'Gilroy';
     color: #848181;
     font-size: 18px;
     line-height: 31px;
@@ -627,87 +634,89 @@ audio {
     margin: 0 auto;
     background-color: #848181; }
 
-.about-press {
-  padding: 0 0 50px; }
-  .about-press .slick-prev {
-    left: -40px;
-    z-index: 2; }
-    .about-press .slick-prev:before {
-      content: url(../img/left.svg); }
-  .about-press .slick-next {
-    right: -20px;
-    z-index: 2; }
-    .about-press .slick-next:before {
-      content: url(../img/right.svg); }
-  .about-press .container {
-    padding: 0 90px; }
-  .about-press .section-title {
-    color: #000000;
-    text-align: center; }
-  .about-press .press-slider__card {
-    padding: 30px 0; }
-    .about-press .press-slider__card .press-slider__line {
-      width: 130px;
-      height: 1px;
-      background-color: #848181;
-      margin: 25px auto; }
-    .about-press .press-slider__card blockquote {
-      margin: 0 30px;
-      width: 270px;
-      padding: 12px 10px;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
-      .about-press .press-slider__card blockquote .press-slider__text {
-        margin-top: 70px;
-        font-size: 22px;
-        line-height: 26px;
-        text-align: center;
-        font-family: 'Gilroy-Regular';
-        color: #848181;
-        min-height: 100px;
-        position: relative; }
-        .about-press .press-slider__card blockquote .press-slider__text::after {
-          content: url(../img/quotes.svg);
-          position: absolute;
-          top: -50px;
-          right: 0;
-          left: 0; }
-    .about-press .press-slider__card footer cite {
-      font-family: 'Gilroy-Medium';
-      font-size: 25px;
-      line-height: 29px;
-      text-align: center;
-      display: block;
-      color: #000000; }
-    .about-press .press-slider__card footer .date {
-      font-size: 25px;
-      line-height: 29px;
-      text-align: center;
-      font-family: 'Gilroy-Regular';
-      color: #848181; }
+.about-press .slick-prev {
+  left: -40px;
+  z-index: 2; }
+  .about-press .slick-prev:before {
+    content: url(../img/left.svg); }
 
-.about-award .award-wrap:last-child {
-  margin: 80px 0; }
+.about-press .slick-next {
+  right: -20px;
+  z-index: 2; }
+  .about-press .slick-next:before {
+    content: url(../img/right.svg); }
 
-.about-details {
-  padding: 60px 0; }
-  .about-details .festival {
-    padding: 0 87px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: auto;
-    grid-gap: .5em; }
-    .about-details .festival li {
-      list-style: disc;
-      font-family: 'Gilroy-Regular';
-      font-size: 18px;
-      line-height: 31px;
-      color: #848181; }
+.about-press .container {
+  padding: 0 90px; }
+
+.about-press .section-title {
+  color: #000000;
+  text-align: center; }
+
+.about-press .press-slider__card {
+  padding: 30px 0; }
+  .about-press .press-slider__card .press-slider__line {
+    width: 130px;
+    height: 1px;
+    background-color: #848181;
+    margin: 25px auto; }
+  .about-press .press-slider__card blockquote {
+    margin: 0 30px;
+    width: 270px;
+    padding: 12px 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+    .about-press .press-slider__card blockquote .press-slider__text {
+      margin-top: 70px;
+      font-size: 22px;
+      line-height: 26px;
+      text-align: center;
+      font-family: 'Gilroy';
+      color: #848181;
+      min-height: 100px;
+      position: relative; }
+      .about-press .press-slider__card blockquote .press-slider__text::after {
+        content: url(../img/quotes.svg);
+        position: absolute;
+        top: -50px;
+        right: 0;
+        left: 0; }
+  .about-press .press-slider__card footer cite {
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+    display: block;
+    color: #000000; }
+  .about-press .press-slider__card footer .date {
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+    font-family: 'Gilroy';
+    color: #848181; }
+
+.about-award {
+  padding: 30px 0; }
+  .about-award .award-wrap {
+    margin: 40px 0; }
+
+.about-details .festival {
+  padding: 0 87px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-gap: .5em;
+  margin-bottom: 20px; }
+  .about-details .festival li {
+    list-style: disc;
+    font-family: 'Gilroy';
+    font-size: 18px;
+    line-height: 31px;
+    color: #848181; }
 
 .about-famous {
   padding: 30px 0;
   background: #F0F0F0; }
-  .about-famous .slick-active .famous-text {
-    font-size: 12px; }
   .about-famous .famuous-slider {
     margin-top: 40px; }
   .about-famous .slick-slide {
@@ -736,7 +745,7 @@ audio {
     color: #000000;
     text-align: center; }
   .about-famous .famous-text {
-    font-size: 15px;
+    font-size: 12px;
     line-height: 26px;
     color: #848181;
     max-width: 350px;
@@ -762,14 +771,14 @@ audio {
     .about-famous blockquote figcaption {
       font-size: 15px;
       line-height: 17px;
-      font-family: 'Gilroy-Regular';
+      font-family: 'Gilroy';
       color: #848181;
       text-align: center;
       margin-top: 5px; }
     .about-famous blockquote cite {
       font-size: 25px;
       line-height: 29px;
-      font-family: 'Gilroy-Regular';
+      font-family: 'Gilroy';
       color: #000000;
       text-align: center;
       display: block; }
@@ -778,7 +787,7 @@ audio {
     text-align: center;
     font-size: 25px;
     line-height: 29px;
-    font-family: 'Gilroy-Regular';
+    font-family: 'Gilroy';
     color: #848181; }
   .about-famous .slick-prev {
     left: 500px;
@@ -819,17 +828,18 @@ audio {
     text-align: end;
     font-size: 25px;
     line-height: 37px;
-    font-family: 'Gilroy-Regular';
+    font-family: 'Gilroy';
     color: #848181;
     margin-top: 20px; }
   .full-news .big-news-card .news-card-title {
+    font-weight: 500;
     font-size: 35px;
     line-height: 43px;
-    font-family: 'Gilroy-SemiBold';
+    font-family: 'Gilroy';
     color: #000000;
     margin: 30px 0; }
   .full-news .big-news-card .news-card-subtitle {
-    font-family: 'Gilroy-Regular';
+    font-family: 'Gilroy';
     font-size: 20px;
     line-height: 23px;
     color: #848181; }
@@ -837,13 +847,54 @@ audio {
     font-size: 25px;
     line-height: 37px;
     margin-top: 30px;
-    font-family: 'Gilroy-Regular';
+    font-family: 'Gilroy';
     color: #000000; }
   .full-news .news-card {
     display: flex;
     flex-direction: column; }
     .full-news .news-card .article {
       margin-right: 0; }
+
+.bg-right {
+  padding: 40px 0 120px;
+  background-image: url(../img/big-bg.png);
+  background-repeat: no-repeat;
+  background-position-x: 78%;
+  background-position-y: center; }
+
+.community-page .community-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+  .community-page .community-wrap a {
+    margin: 30px 5px;
+    width: 290px;
+    height: 120px;
+    display: block; }
+    .community-page .community-wrap a img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: contain;
+         object-fit: contain;
+      -o-object-position: center;
+         object-position: center; }
+
+.news-page .news-wrap {
+  display: flex !important; }
+
+.news-page .slick-dots li {
+  margin: 0 10px; }
+
+.news-page .slick-dots li button {
+  width: 30px;
+  height: 6px; }
+
+.news-page .slick-dots li button:before {
+  content: url(../img/ul.svg);
+  width: 30px;
+  height: 6px;
+  margin-right: 5px; }
 
 .media__archive__content {
   display: flex;
