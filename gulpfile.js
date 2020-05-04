@@ -6,7 +6,7 @@ let postcss = require('gulp-postcss');
 let babel = require('gulp-babel');
 let browserSync = require('browser-sync').create();
 gulp.task('build:pug', () => {
-    return gulp.src('app/pug/*.pug')
+    return gulp.src('app/pug/**/*.pug')
       .pipe(pug({
         pretty: true
       }))
