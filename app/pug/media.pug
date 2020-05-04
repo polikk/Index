@@ -16,7 +16,7 @@ html(lang="en")
     body
         include header.pug
         main.media
-            section.media__archive.section.container
+            section.container.section.media__archive
                 h6.section-title.section-title-black.center Архів фотографій
                 .media__archive__content
                     .media__archive__content__years
@@ -34,7 +34,7 @@ html(lang="en")
                         .media__archive__content__photos__navigation
 
 
-            section.media__video.section
+            section.section.media__video
                 h6.section-title.section-title-black.center Відео
                 .media__video__content.container
                     iframe.media__video__content__player(frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture")
@@ -45,7 +45,7 @@ html(lang="en")
                         //- .media__video__content__list__control.media__video__content__list__control-next v
 
 
-            section.media__discography.section.container
+            section.container.section.media__discography
                 h6.section-title.section-title-black.center Дискографія
                 .media__discography__items
                     each val in [1, 2, 3, 4, 5]
