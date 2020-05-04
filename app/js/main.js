@@ -21,6 +21,7 @@ $('.main-info').slick({
     infinite: true,
     autoplay: true,
     autoplaySpeed: 2000,
+    swipeToSlide: true,
     speed: 300,
     slidesToShow: 3,
     adaptiveHeight: true
@@ -30,11 +31,24 @@ $('.famuous-slider').slick({
   centerMode: true,
   centerPadding: '10px',
   slidesToShow: 3,
-  //infinite: true,
+  infinite: true,
+  swipeToSlide: true,
   speed: 300,
   autoplay: true,
   autoplaySpeed: 3000,
   adaptiveHeight: true,
+});
+$('.news-slider').slick({
+  dots: true,
+  infinite: true,
+  //autoplay: true,
+  prevArrow: false,
+  nextArrow: false,
+  autoplaySpeed: 2000,
+  swipeToSlide: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true
 });
 var $status = $('.pagingInfo');
 var $slickElement = $('.famuous-slider');

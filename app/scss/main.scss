@@ -13,7 +13,7 @@ html{
 }
 body{
     height:100%;
-    font-family: 'Gilroy-Regular';
+    font-family: 'Gilroy';
 }
 main{
     padding-top: 100px;
@@ -50,8 +50,10 @@ audio {
     border: none;
     border-radius: 30px;
     text-align: center;
-    font-family: 'Gilroy-Medium';
+    font-family: 'Gilroy';
+    font-weight: 500;
     font-size: 15px;
+    text-decoration: none;
 }
 .center {
     text-align: center;
@@ -97,7 +99,7 @@ audio {
         align-items: center ;
         }
         &__link{
-            font-family:'Gilroy-Regular';
+            font-family:'Gilroy';
             color: $gray;
             text-decoration: none;
             &:hover,:active{
@@ -167,7 +169,8 @@ audio {
     }
     padding: 20px 0;
     &__title{
-        font-family: 'Gilroy-Medium';
+        font-family: 'Gilroy';
+        font-weight: 700;
         opacity: 0.75;
         font-size: 50px;
         line-height: 59px;
@@ -180,7 +183,7 @@ audio {
         position: relative;
     }
     &__subtitle{
-        font-family: 'Gilroy-Medium';
+        font-family: 'Gilroy';
         font-style: italic;
         font-size: 22px;
         line-height: 26px;
@@ -189,8 +192,9 @@ audio {
         margin-left: 180px;
     }
     .year{
-            font-family: 'Gilroy-Bold';
+            font-family: 'Gilroy';
             margin-right: 35px;
+            font-weight: 700;
             padding-top: 10px;
             font-size: 13px;
             color: rgba(0, 0, 0, 0.5);
@@ -217,7 +221,8 @@ audio {
         }
     }
     &__text{
-        font-family: 'Gilroy-Medium';
+        font-family: 'Gilroy';
+        font-weight: 500;
         font-size: 35px;
         line-height: 41px;
         margin-left: 70px;
@@ -252,7 +257,8 @@ audio {
 }
 .section-title{
     color:  #FFFFFF;
-    font-family:'Gilroy-Medium' ;
+    font-family:'Gilroy';
+    font-weight: 500;
     font-size: 35px;
     &-black {
         color: black;
@@ -262,7 +268,8 @@ audio {
     position: relative;
     display: flex;
     align-items: center;
-    font-family:'Gilroy-Medium' ;
+    font-family:'Gilroy' ;
+    font-weight: 500;
     text-decoration: none;
     &::after{
         position: absolute;
@@ -329,8 +336,8 @@ audio {
         
       
         &__title{
-            
-            font-family: 'Gilroy-Bold';
+            font-weight: 700;
+            font-family: 'Gilroy';
             font-size: 65px;
             color: #C4C4C4;
             text-align: center;
@@ -345,7 +352,7 @@ audio {
             
             width: 100%;
             color:  #848181;
-            font-family:'Gilroy-Regular' ;
+            font-family:'Gilroy' ;
             font-size: 22px;
             text-align: center;
             line-height: 29px;
@@ -393,7 +400,11 @@ audio {
 .article{
     &:hover{
         transform: scale(1.1) ;
-        
+        figure{
+            &::before{
+                bottom: -1px;
+            }
+        }
     }
     margin: 15px;
     max-width: 300px;
@@ -421,6 +432,7 @@ audio {
             bottom: 0;
             right: 0;
             left: 0;
+           // background-color: white;
         }
     }
     &__img{
@@ -433,27 +445,29 @@ audio {
         position: relative;
         top:-10px;
         font-size: 20px;
-        font-family: 'Gilroy-Regular';
+        font-family: 'Gilroy';
         color: #848181;
         z-index: 6;
     }
     &__title{
-        font-family: 'Gilroy-SemiBold';
+        font-weight: 700;
+        font-family: 'Gilroy';
         font-size: 25px;
         line-height: 31px;
         color: #000000;
         margin-bottom: 12px;
     }
     &__text{
-        font-family: 'Gilroy-Regular';
+        font-family: 'Gilroy';
         font-size: 20px;
         line-height: 23px;
         color: $gray;
         width: 250px;
-        height: 68px;
+        height: 90px;
         overflow-wrap: break-word;
         overflow: hidden;
         word-break: break-all;
+        margin-bottom: 20px;
         
     }
     .btn-article{
@@ -562,7 +576,8 @@ audio {
         }
     }
     &__title{
-        font-family:'Gilroy-Medium' ;
+        font-family:'Gilroy' ;
+        font-weight: 500;
         font-size: 30px;
         color: #000000;
         margin-bottom: 15px;
@@ -573,7 +588,7 @@ audio {
         text-decoration: none;
         display: block;
         color: #000000;
-        font-family: 'Gilroy-Regular';
+        font-family: 'Gilroy';
     }
     &-about{
         &:last-child{
@@ -614,7 +629,7 @@ audio {
             margin-right: 70px;
         }
         &__link{
-            font-family: 'Gilroy-Regular';
+            font-family: 'Gilroy';
             font-size: 18px;
             line-height: 23px;
             text-decoration: none;
@@ -653,7 +668,8 @@ audio {
         text-align: center;
     }
     &__subtitle{
-        font-family:'Gilroy-Regular' ;
+        font-family:'Gilroy' ;
+        
         color: #848181;
         font-size: 25px;
         line-height: 43px;
@@ -686,7 +702,7 @@ audio {
         }
     }
     &__text{
-        font-family:'Gilroy-Regular' ;
+        font-family:'Gilroy' ;
         color: #848181;
         font-size: 18px;
         line-height: 31px;
@@ -702,7 +718,7 @@ audio {
     }
 }
 .about-press{
-    padding: 0 0 50px;
+    
     .slick-prev{
         left: -40px;
         z-index: 2;
@@ -743,7 +759,7 @@ audio {
                 font-size: 22px;
                 line-height: 26px;
                 text-align: center;
-                font-family:'Gilroy-Regular' ;
+                font-family:'Gilroy' ;
                 color: #848181;
                 min-height: 100px;
                 position: relative;
@@ -760,7 +776,8 @@ audio {
         }
         footer{
             & cite{
-                font-family: 'Gilroy-Medium';
+                font-family: 'Gilroy';
+                font-weight: 500;
                 font-size: 25px;
                 line-height: 29px;
                 text-align: center;
@@ -771,32 +788,31 @@ audio {
                 font-size: 25px;
                 line-height: 29px;
                 text-align: center;
-                font-family:'Gilroy-Regular' ;
+                font-family:'Gilroy' ;
                 color: #848181;
             }
         }
     }
 }
 .about-award{
+    padding: 30px 0;
     .award-wrap{
-        &:last-child{
-            margin: 80px 0;
-        }
+        margin: 40px 0;
     }
 }
 .about-details{
-    padding: 60px 0;
+    //
     .festival{
         padding: 0 87px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: auto;
         grid-gap: .5em;
-        
+        margin-bottom: 20px;
            
             & li{
                 list-style: disc;
-                font-family: 'Gilroy-Regular';
+                font-family: 'Gilroy';
             font-size: 18px;
             line-height: 31px;
             color: #848181;
@@ -809,11 +825,7 @@ audio {
 }
 
 .about-famous{
-    .slick-active{
-        .famous-text{
-            font-size: 12px;
-        }
-    }
+    
     .famuous-slider{
         margin-top: 40px;
     }
@@ -864,7 +876,7 @@ audio {
     padding: 30px 0;
     background: $gray2;
     .famous-text{
-        font-size: 15px;
+        font-size: 12px;
         line-height: 26px;
         color: #848181;
         max-width:350px;
@@ -896,7 +908,7 @@ audio {
         figcaption{
             font-size: 15px;
             line-height: 17px;
-            font-family:'Gilroy-Regular' ;
+            font-family:'Gilroy' ;
             color: #848181;
             text-align: center;
             margin-top: 5px;
@@ -905,7 +917,7 @@ audio {
         cite{
             font-size: 25px;
             line-height: 29px;
-            font-family:'Gilroy-Regular' ;
+            font-family:'Gilroy' ;
             color: #000000;
             text-align: center;
             display: block;
@@ -916,7 +928,7 @@ audio {
         text-align: center;
         font-size: 25px;
         line-height: 29px;
-        font-family:'Gilroy-Regular' ;
+        font-family:'Gilroy' ;
         color: #848181
     }
     .slick-prev{
@@ -968,19 +980,20 @@ audio {
         text-align: end;
         font-size: 25px;
         line-height: 37px;
-        font-family:'Gilroy-Regular' ;
+        font-family:'Gilroy' ;
         color: #848181;
         margin-top: 20px;
        }
        .news-card-title{
+           font-weight: 500;
         font-size: 35px;
         line-height: 43px;
-        font-family:'Gilroy-SemiBold' ;
+        font-family:'Gilroy' ;
         color: #000000;
         margin:30px 0;
        }
        .news-card-subtitle{
-        font-family:'Gilroy-Regular' ;
+        font-family:'Gilroy' ;
         font-size: 20px;
         line-height: 23px;
         color: #848181
@@ -989,7 +1002,7 @@ audio {
         font-size: 25px;
         line-height: 37px;
        margin-top: 30px;
-        font-family:'Gilroy-Regular' ;
+        font-family:'Gilroy' ;
         
         color: #000000;
        }
@@ -1003,8 +1016,53 @@ audio {
     }
 }
 }
-
-
+.bg-right{
+    padding: 40px 0 120px;
+    background-image: url(../img/big-bg.png);
+    background-repeat: no-repeat;
+    background-position-x: 78%;
+    background-position-y: center;
+}
+.community-page{
+    .community-wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        a{  
+            margin:30px 5px;
+            width: 290px;
+            height: 120px;
+            display: block;
+            img{
+                 width: 100%;
+                 height: 100%;
+                 object-fit: contain;
+                 object-position: center;
+            }
+        }
+    }
+}
+.news-page{
+    .news-wrap{
+        display: flex!important;
+    }
+    .slick-dots li {
+        margin: 0 10px;
+    }
+    .slick-dots li button{
+        width: 30px;
+      
+        height: 6px; 
+    }
+    .slick-dots li button:before{
+        content:url(../img/ul.svg);
+        width: 30px;
+        height: 6px;
+        margin-right: 5px;
+       
+    }
+}
 // MEDIA page
 
 .media {
