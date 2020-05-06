@@ -65,6 +65,76 @@ table {
   font-weight: 500;
   src: url("../fonts/Gilroy-Medium.eot?") format("eot"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("truetype"), url("../fonts/Gilroy-Medium.svg#Gilroy") format("svg"); }
 
+.discography__items {
+  margin-top: 36px; }
+
+.discography__item {
+  height: 100px;
+  padding: 8px 12px;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 12px;
+  transition: 0.2s;
+  position: relative; }
+  .discography__item__toggler {
+    position: absolute;
+    right: 32px;
+    top: 12px;
+    color: #848181;
+    padding: 10px;
+    transition: 0.2s;
+    cursor: pointer; }
+    .discography__item__toggler:hover {
+      color: black; }
+    .discography__item__toggler-close {
+      font-size: 26px; }
+  .discography__item-closed img {
+    width: 95px;
+    height: 80px; }
+  .discography__item-closed p {
+    display: none; }
+  .discography__item-closed .discography__item__audios {
+    display: none; }
+  .discography__item-closed .discography__item__toggler-close {
+    display: none; }
+  .discography__item-closed .discography__item__toggler-open {
+    display: inline-block;
+    transform: rotate(-90deg) scale(0.6); }
+    .discography__item-closed .discography__item__toggler-open::before {
+      content: url(../img/left.svg); }
+  .discography__item-opened {
+    padding: 32px;
+    height: 784px;
+    overflow: hidden; }
+    .discography__item-opened img {
+      width: 268px;
+      height: 268px; }
+    .discography__item-opened p {
+      display: inline-block; }
+    .discography__item-opened .discography__item__audios {
+      display: block; }
+    .discography__item-opened .discography__item__toggler-close {
+      display: inline-block; }
+    .discography__item-opened .discography__item__toggler-open {
+      display: none; }
+  .discography__item__info {
+    display: flex; }
+    .discography__item__info img {
+      margin: 0 24px 0 0;
+      transition: 0.2s; }
+    .discography__item__info h6 {
+      font-size: 25px;
+      padding-top: 32px; }
+    .discography__item__info p {
+      white-space: normal;
+      color: #848181;
+      font-size: 15px;
+      margin-top: 12px;
+      line-height: 1.4; }
+  .discography__item__audios {
+    margin-top: 36px; }
+
 * {
   box-sizing: border-box; }
 
@@ -582,9 +652,6 @@ audio {
   .audio .section-title {
     text-align: center;
     color: #000000; }
-  .audio img {
-    display: block;
-    margin: 0 auto; }
 
 .about-main {
   padding: 50px 0; }
@@ -899,12 +966,11 @@ audio {
 .media__archive__content {
   display: flex;
   align-items: flex-start;
-  height: 376px;
   margin-top: 24px; }
   .media__archive__content__years {
     display: flex;
     flex-direction: column;
-    width: 156px;
+    width: 172px;
     margin-right: 24px; }
     .media__archive__content__years__item {
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -921,34 +987,39 @@ audio {
         color: white; }
   .media__archive__content__photos {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: calc(100% - 156px);
+    width: calc(100% - 172px);
     height: 100%; }
     .media__archive__content__photos__slider {
       position: relative;
       height: 85%;
       padding: 20px; }
+      .media__archive__content__photos__slider__item {
+        display: grid !important;
+        grid-template-columns: 33.33% 33.33% 33.33%; }
+        .media__archive__content__photos__slider__item img {
+          height: 175px;
+          width: 100%;
+          -o-object-fit: cover;
+             object-fit: cover; }
       .media__archive__content__photos__slider div {
-        height: 100%; }
+        height: 100% !important; }
+      .media__archive__content__photos__slider .slick-arrow {
+        top: 99%;
+        transform: scale(0.7); }
       .media__archive__content__photos__slider .slick-prev {
-        left: 40%;
-        top: 324px; }
+        left: 45%; }
         .media__archive__content__photos__slider .slick-prev::before {
           content: url(../img/left.svg); }
       .media__archive__content__photos__slider .slick-next {
-        top: 324px;
-        right: 40%; }
+        right: 45%; }
         .media__archive__content__photos__slider .slick-next::before {
           content: url(../img/right.svg); }
     .media__archive__content__photos__navigation {
       text-align: center;
       font-size: 25px;
       line-height: 29px;
-      color: #848181; }
-    .media__archive__content__photos img {
-      height: 100%;
-      width: 300px;
-      -o-object-fit: cover;
-         object-fit: cover; }
+      color: #848181;
+      height: 40px; }
 
 .media__video {
   background-color: #F0F0F0;
@@ -967,7 +1038,7 @@ audio {
       height: 100%;
       overflow-y: auto;
       position: relative;
-      width: 116px; }
+      width: 134px; }
       .media__video__content__list__control {
         position: absolute; }
         .media__video__content__list__control-prev {
@@ -989,72 +1060,3 @@ audio {
           margin-bottom: 0; }
         .media__video__content__list__preview-active {
           background-color: #B6251D; }
-
-.media__discography__items {
-  margin-top: 36px; }
-
-.media__discography__item {
-  height: 100px;
-  padding: 8px 12px;
-  width: 100%;
-  background: white;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-bottom: 12px;
-  transition: 0.2s;
-  position: relative; }
-  .media__discography__item__toggler {
-    position: absolute;
-    right: 32px;
-    top: 12px;
-    color: #848181;
-    padding: 10px;
-    transition: 0.2s;
-    cursor: pointer; }
-    .media__discography__item__toggler:hover {
-      color: black; }
-    .media__discography__item__toggler-open {
-      font-size: 48px; }
-    .media__discography__item__toggler-close {
-      font-size: 36px; }
-  .media__discography__item-closed img {
-    width: 95px;
-    height: 80px; }
-  .media__discography__item-closed p {
-    display: none; }
-  .media__discography__item-closed .media__discography__item__audios {
-    display: none; }
-  .media__discography__item-closed .media__discography__item__toggler-close {
-    display: none; }
-  .media__discography__item-closed .media__discography__item__toggler-open {
-    display: inline-block; }
-  .media__discography__item-opened {
-    padding: 32px;
-    height: 784px;
-    overflow: hidden; }
-    .media__discography__item-opened img {
-      width: 268px;
-      height: 268px; }
-    .media__discography__item-opened p {
-      display: inline-block; }
-    .media__discography__item-opened .media__discography__item__audios {
-      display: block; }
-    .media__discography__item-opened .media__discography__item__toggler-close {
-      display: inline-block; }
-    .media__discography__item-opened .media__discography__item__toggler-open {
-      display: none; }
-  .media__discography__item__info {
-    display: flex; }
-    .media__discography__item__info img {
-      margin-right: 24px;
-      transition: 0.2s; }
-    .media__discography__item__info h6 {
-      font-size: 25px;
-      padding-top: 32px; }
-    .media__discography__item__info p {
-      white-space: normal;
-      color: #848181;
-      font-size: 15px;
-      margin-top: 12px;
-      line-height: 1.4; }
-  .media__discography__item__audios {
-    margin-top: 36px; }
