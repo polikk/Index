@@ -1,9 +1,10 @@
-@import'clear';
-@import'mixins';
-@import'fonts';
-$gray:#848181;
-$gray2: #F0F0F0;
-$red:#B6251D;
+@import 'clear';
+@import 'mixins';
+@import 'fonts';
+@import 'variables';
+
+@import './components/discography.scss';
+
 *{
     box-sizing: border-box;
 }
@@ -656,10 +657,6 @@ audio {
         text-align: center;
         color: #000000;
     }
-    img{
-        display: block;
-        margin: 0 auto;
-    }
 }
 .about-main{
     padding: 50px 0;
@@ -1066,20 +1063,19 @@ audio {
 // MEDIA page
 
 .media {
-    $transition: .2s;
-    $box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
     &__archive {
         &__content {
             display: flex;
             align-items: flex-start;
-            height: 376px;
+            // height: 100px;
             margin-top: 24px;
+
+            $years-width: 172px;
 
             &__years {
                 display: flex;
                 flex-direction: column;
-                width: 156px;
+                width: $years-width;
                 margin-right: 24px;
 
                 &__item {
@@ -1102,7 +1098,7 @@ audio {
 
             &__photos {
                 box-shadow: $box-shadow;
-                width: calc(100% - 156px);
+                width: calc(100% - #{$years-width});
                 height: 100%;
 
                 &__slider {
@@ -1110,24 +1106,39 @@ audio {
                     height: 85%;
                     padding: 20px;
 
+                    &__item {
+                        display: grid !important;
+                        grid-template-columns: 33.33% 33.33% 33.33%;
+
+                        img {
+                            height: 175px;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
                     div {
-                        height: 100%;
+                        height: 100% !important;
                     }
 
                     .slick-current {}
 
-                    .slick-prev{
-                        left: 40%;
-                        top: 324px;
+                    .slick-arrow {
+                        top: 99%;
+                        transform: scale(0.7);
+                    }
+
+                    .slick-prev {
+                        left: 45%;
 
                         &::before{
                             content: url(../img/left.svg);
                         }
                       
                     }
+
                     .slick-next{
-                        top: 324px;
-                        right: 40%;
+                        right: 45%;
 
                         &::before{
                             content: url(../img/right.svg);
@@ -1140,12 +1151,7 @@ audio {
                     font-size: 25px;
                     line-height: 29px;
                     color: $gray;
-                }
-
-                img {
-                    height: 100%;
-                    width: 300px;
-                    object-fit: cover;
+                    height: 40px;
                 }
             }
         }
@@ -1172,7 +1178,7 @@ audio {
                 height: 100%;
                 overflow-y: auto;
                 position: relative;
-                width: 116px;
+                width: 134px;
 
                 &__control {
                     position: absolute;
@@ -1206,124 +1212,6 @@ audio {
                         background-color: $red;
                     }
                 }
-            }
-        }
-    }
-
-    &__discography {
-        &__items {
-            margin-top: 36px;
-        }
-
-        &__item {
-            height: 100px;
-            padding: 8px 12px;
-            width: 100%;
-            background: white;
-            box-shadow: $box-shadow;
-            margin-bottom: 12px;
-            transition: $transition;
-            position: relative;
-
-            &__toggler {
-                position: absolute;
-                right: 32px;
-                top: 12px;
-                
-                color: $gray;
-                padding: 10px;
-                transition: $transition;
-                cursor: pointer;
-
-                &:hover {
-                    color: black;
-                }
-
-                &-open {
-                    font-size: 48px;
-                }
-
-                &-close {
-                    font-size: 36px;
-                }
-            }
-
-            &-closed {
-                img {
-                    width: 95px;
-                    height: 80px;
-                }
-
-                p {
-                    display: none;
-                }
-
-                .media__discography__item__audios {
-                    display: none;
-                }
-
-                .media__discography__item__toggler-close {
-                    display: none;
-                }
-
-                .media__discography__item__toggler-open {
-                    display: inline-block;
-                }
-            }
-
-            &-opened {
-                padding: 32px;
-                height: 784px;
-                overflow: hidden;
-
-                img {
-                    width: 268px;
-                    height: 268px;
-                }
-
-                p {
-                    display: inline-block;
-                }
-
-                .media__discography__item__audios {
-                    display: block;
-                }
-
-                .media__discography__item__toggler-close {
-                    display: inline-block;
-                }
-
-                .media__discography__item__toggler-open {
-                    display: none;
-                }
-            }
-
-            &__info {
-                display: flex;
-
-                img {
-                    margin-right: 24px;
-                    transition: $transition;
-                }
-    
-                h6 {
-                    font-size: 25px;
-                    padding-top: 32px;
-                }
-    
-                p {
-                    white-space: normal;
-                    color: $gray;
-                    font-size: 15px;
-                    margin-top: 12px;
-                    line-height: 1.4;
-                }
-            }
-
-            &__audios {
-                margin-top: 36px;
-                // max-height: 50%;
-                // overflow: auto;
             }
         }
     }
