@@ -52,26 +52,7 @@ html(lang="en")
                         //- .media__video__content__list__control.media__video__content__list__control-next v
 
 
-            section.container.section.discography
-                h6.section-title.section-title-black.center Дискографія
-                .discography__items
-                    each val in [1, 2, 3, 4, 5]
-                        .discography__item.discography__item-closed
-                            span.discography__item__toggler.discography__item__toggler-open
-                            span.discography__item__toggler.discography__item__toggler-close &#10005;
-
-                            .discography__item__info
-                                img(src="https://market.interra.ru/media/product/pic/9f309fdc-70ad-11e9-bd41-00505693338e.JPG")
-                                div
-                                    h6 Оливье Мессиан. Три маленькие литургии
-                                    p «Три маленьие литургии» для хора, фортепиано, челесты, вибрафона, волн Мартено, ударных и струнного оркестра, написаны Мессианом в 1944 году. <br /><br /> Автор, переживший до этого ужасы гитлеровского концлагеря , создал произведения удивительной свежести, напоенного ощущением свободы и света, слияния с природой и радости бытия.
-
-                            .discography__item__audios
-                                each val in ['Presque vif, avec une grande joie', 'Presque vif, avec une grande joie', 'Presque vif, avec une grande joie', 'Presque vif, avec une grande joie']
-                                    h5.audio-name= val
-                                    audio(controls)
-                                        source(src="http://geralex.site/media/audio/brain-music.mp3")
-                                        p Your browser doesn't support the audio tag
+            include partials/discography
 
 
         include partials/footer
