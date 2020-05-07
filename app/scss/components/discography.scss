@@ -6,6 +6,7 @@
   }
 
   &__item {
+    height: 100px;
     padding: 8px 12px;
     width: 100%;
     background: white;
@@ -65,7 +66,7 @@
 
     &-opened {
         padding: 32px;
-        height: auto;
+        height: 784px;
         overflow: hidden;
 
         img {

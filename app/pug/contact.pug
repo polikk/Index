@@ -15,9 +15,24 @@ html(lang="en")
     body
         include partials/header
         main
-            section.about-main
+            section.contact-us.bg-right
                 .container
-                    h2.section-title
+                    h2.section-title Зв’язатися з нами
+                    .form-frame
+            section.contacts.bg-right
+                .container  
+                    .contacts-wrap
+                        .contacts-info
+                            .contacts-about
+                                h5.contacts__title Наша адреса:
+                                address.contacts__text Україна, Київ-004, вул. Дарвіна, 2,<br>Палац дітей та юнацтва <br>Печерського району
+                            .contacts-about
+                                h5.contacts__title Контакти:
+                                a.contacts__text(href="tel:+38 (044) 331 43 29") +38 (044) 331 43 29
+                                a.contacts__text(href="tel:+38 (067) 915 99 90") +38 (067) 915 99 90
+                                a.contacts__text(href="mailto:Shchedryk@gmail.com") Shchedryk@gmail.com
+                        .contacts-map
+                            img.contacts-map__img(src="./img/map.png", alt="", srcset="")
         include partials/footer
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
         script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js')
