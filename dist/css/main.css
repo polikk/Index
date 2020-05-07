@@ -69,7 +69,6 @@ table {
   margin-top: 36px; }
 
 .discography__item {
-  height: 100px;
   padding: 8px 12px;
   width: 100%;
   background: white;
@@ -105,7 +104,7 @@ table {
       content: url(../img/left.svg); }
   .discography__item-opened {
     padding: 32px;
-    height: 784px;
+    height: auto;
     overflow: hidden; }
     .discography__item-opened img {
       width: 268px;
