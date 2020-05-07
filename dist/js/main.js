@@ -59,10 +59,10 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
 }); // MEDIA page
 // discogrphy
 
-var discographyOpenTogglers = document.querySelectorAll('.media__discography__item__toggler-open');
+var discographyOpenTogglers = document.querySelectorAll('.discography__item__toggler-open');
 var TOGGLE_DISCOGRAPHY_CLASSES = {
-  opened: 'media__discography__item-opened',
-  closed: 'media__discography__item-closeed'
+  opened: 'discography__item-opened',
+  closed: 'discography__item-closeed'
 };
 discographyOpenTogglers.forEach(function (toggler) {
   toggler.addEventListener('click', function (e) {
@@ -71,7 +71,7 @@ discographyOpenTogglers.forEach(function (toggler) {
     discography.classList.add(TOGGLE_DISCOGRAPHY_CLASSES.opened);
   });
 });
-var discographyCloseTogglers = document.querySelectorAll('.media__discography__item__toggler-close');
+var discographyCloseTogglers = document.querySelectorAll('.discography__item__toggler-close');
 discographyCloseTogglers.forEach(function (toggler) {
   toggler.addEventListener('click', function (e) {
     var discography = e.target.parentNode;
@@ -81,7 +81,7 @@ discographyCloseTogglers.forEach(function (toggler) {
 }); // archive slider
 
 var archiveSlider = $('.media__archive__content__photos__slider');
-var SLIDE_TO_SHOW = 3;
+var SLIDE_TO_SHOW = 1;
 
 var initializeSlider = function initializeSlider() {
   archiveSlider.slick({
@@ -90,8 +90,7 @@ var initializeSlider = function initializeSlider() {
     slidesToShow: SLIDE_TO_SHOW,
     // infinite: false,
     speed: 500,
-    autoplay: true,
-    autoplaySpeed: 3000,
+    autoplay: false,
     adaptiveHeight: true
   });
 };
