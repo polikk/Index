@@ -33,4 +33,4 @@ pages:
     - build
 
   rules:
-    - branch: master
+    - if: $CI_COMMIT_BRANCH == 'master'
