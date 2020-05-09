@@ -15,10 +15,32 @@ html(lang="en")
     body
         include partials/header
         main
-            section.contact-us.bg-right
+
+            section.contacts.bg-right
                 .container
                     h2.section-title Зв’язатися з нами
-                    .form-frame
+                    .contacts__info
+                        .contacts__info__person-description
+                            img(src="https://s7g3.scene7.com/is/image/soloinvest/n00554A?$big_image_web$")
+                            span.contacts__info__person-description__name Асташева Олена Борисівна
+                            hr
+                            a(href="mailto:astasheva@gmail.com") astasheva@gmail.com
+                            a(href="tel:+380679159990") +380679159990
+                        form.contacts__info__form
+                            .contacts__info__form__fullname
+                                .contacts__info__form__control
+                                    .label Ім’я
+                                    input.input(placeholder="Ваше ім’я")
+                                .contacts__info__form__control
+                                    .label Прізвище
+                                    input.input(placeholder="Ваше прізвище")
+                            .label Пошта
+                            input.input(placeholder="email@example.com")
+                            .label Повідомлення
+                            textarea.textarea(placeholder="Напишіть текст вашого повідомлення...")
+                            .contacts__info__form__btn-wrapper
+                                button.btn(type="submit") Надіслати
+
             section.contacts.bg-right
                 .container  
                     .contacts-wrap
