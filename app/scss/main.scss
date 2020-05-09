@@ -597,7 +597,7 @@ audio {
 
         &__person-description {
             width: $person-width;
-            padding: 36px 36px 48px;
+            padding: 36px;
             background: white;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     
@@ -631,6 +631,26 @@ audio {
                 text-decoration: none;
                 display: inline-block;
                 margin-bottom: 12px;
+                display: flex;
+                align-items: center;
+
+                &:before {
+                    padding-right: 8px;
+                }
+            }
+
+            &__email {
+                &:before{
+                    content: url(../img/email.svg);
+                    margin-left: -4px;
+                    margin-bottom: -4px;
+                }
+            }
+
+            &__phone {
+                &:before{
+                    content: url(../img/phone.svg);
+                }
             }
         }
     
