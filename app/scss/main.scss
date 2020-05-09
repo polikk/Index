@@ -42,6 +42,32 @@ audio {
     margin-top: 48px;
 }
 
+@mixin text-field {
+    background-color: #F0F0F0;
+    padding: 8px;
+    margin-top: 8px; 
+    border: none;
+    outline: none;
+    font-size: 12px;
+}
+
+.input {
+    height: 30px;
+    @include text-field;
+}
+
+.textarea {
+    @include text-field;
+    height: 140px;
+}
+
+.label {
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+    display: block;
+}
+
 .btn{
     cursor: pointer;
     padding: 12px 35px;
@@ -562,6 +588,99 @@ audio {
 }
 .contacts{
     padding: 60px 0 80px;
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+
+        $person-width: 268px;
+
+        &__person-description {
+            width: $person-width;
+            padding: 36px;
+            background: white;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+            img {
+                object-fit: cover;
+                width: 195px;
+                height: 195px;
+                border-radius: 50%;
+            }
+    
+            &__name {
+                display: inline-block;
+                text-align: center;
+                white-space: normal;
+                margin: 36px 0 28px;
+                font-size: 20px;
+                color: black;
+                line-height: 1.4;
+            }
+    
+            hr {
+                border: none;
+                height: 1px;
+                background-color: black;
+                margin-bottom: 36px;
+            }
+    
+            a {
+                font-size: 14px;
+                color: black;
+                text-decoration: none;
+                display: inline-block;
+                margin-bottom: 12px;
+                display: flex;
+                align-items: center;
+
+                &:before {
+                    padding-right: 8px;
+                }
+            }
+
+            &__email {
+                &:before{
+                    content: url(../img/email.svg);
+                    margin-left: -4px;
+                    margin-bottom: -4px;
+                }
+            }
+
+            &__phone {
+                &:before{
+                    content: url(../img/phone.svg);
+                }
+            }
+        }
+    
+        &__form {
+            background: white;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            padding: 36px 32px;
+            width: calc(100% - #{$person-width + 32px});
+
+            input, textarea {
+                margin-bottom: 32px;
+                width: 100%;
+            }
+
+            &__control {
+                width: 45%;
+            }
+
+            &__fullname {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            &__btn-wrapper {
+                text-align: center;
+            }
+        }
+    }
+
     .section-title{
         text-align: center;
         color: #000000;
@@ -1391,26 +1510,5 @@ audio {
   .footer-colum li {
     margin: 9px 0;
   }
-.contact-us{
-    padding: 60px 0;
-    .section-title{
-        color: #000000;
-        text-align: center;
-        margin-bottom: 50px;
-    }
-    .form-frame{
-        position: relative;
-         overflow: hidden;
-        padding-top: 56.25%;
-        & iframe{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0
-        }
-    }
-}
 
 
