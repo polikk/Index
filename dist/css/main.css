@@ -659,6 +659,8 @@ audio {
         justify-content: space-between; }
       .contacts__info__form__btn-wrapper {
         text-align: center; }
+        .contacts__info__form__btn-wrapper input {
+          width: 150px; }
   .contacts .section-title {
     text-align: center;
     color: #000000;
