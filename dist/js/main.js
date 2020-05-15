@@ -62,7 +62,7 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
 var discographyOpenTogglers = document.querySelectorAll('.discography__item__toggler-open');
 var TOGGLE_DISCOGRAPHY_CLASSES = {
   opened: 'discography__item-opened',
-  closed: 'discography__item-closeed'
+  closed: 'discography__item-closed'
 };
 discographyOpenTogglers.forEach(function (toggler) {
   toggler.addEventListener('click', function (e) {

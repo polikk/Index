@@ -67,6 +67,9 @@ table {
 
 .discography__items {
   margin-top: 36px; }
+  @media (max-width: 1200px) {
+    .discography__items {
+      padding: 0 24px; } }
 
 .discography__item {
   padding: 8px 12px;
@@ -88,13 +91,6 @@ table {
       color: black; }
     .discography__item__toggler-close {
       font-size: 26px; }
-  .discography__item-closed img {
-    width: 95px;
-    height: 80px; }
-  .discography__item-closed p {
-    display: none; }
-  .discography__item-closed .discography__item__audios {
-    display: none; }
   .discography__item-closed .discography__item__toggler-close {
     display: none; }
   .discography__item-closed .discography__item__toggler-open {
@@ -102,6 +98,18 @@ table {
     transform: rotate(-90deg) scale(0.6); }
     .discography__item-closed .discography__item__toggler-open::before {
       content: url(../img/left.svg); }
+  .discography__item-closed .discography__item__info img {
+    width: 95px;
+    height: 80px; }
+  @media (max-width: 768px) {
+    .discography__item-closed .discography__item__info__text h6 {
+      font-size: 14px;
+      padding-top: 24px;
+      white-space: normal; } }
+  .discography__item-closed .discography__item__info__text p {
+    display: none; }
+  .discography__item-closed .discography__item__audios {
+    display: none; }
   .discography__item-opened {
     padding: 32px;
     height: auto;
@@ -109,28 +117,45 @@ table {
     .discography__item-opened img {
       width: 268px;
       height: 268px; }
-    .discography__item-opened p {
-      display: inline-block; }
-    .discography__item-opened .discography__item__audios {
-      display: block; }
     .discography__item-opened .discography__item__toggler-close {
       display: inline-block; }
     .discography__item-opened .discography__item__toggler-open {
       display: none; }
+    @media (max-width: 768px) {
+      .discography__item-opened .discography__item__info {
+        flex-wrap: wrap; }
+        .discography__item-opened .discography__item__info img {
+          margin: 24px 0 0 0;
+          width: 100%; } }
+    .discography__item-opened .discography__item__info__text {
+      max-width: none; }
+      .discography__item-opened .discography__item__info__text p {
+        display: inline-block; }
+      .discography__item-opened .discography__item__info__text h6 {
+        white-space: normal; }
+    .discography__item-opened .discography__item__audios {
+      display: block; }
   .discography__item__info {
     display: flex; }
     .discography__item__info img {
       margin: 0 24px 0 0;
       transition: 0.2s; }
-    .discography__item__info h6 {
-      font-size: 25px;
-      padding-top: 32px; }
-    .discography__item__info p {
-      white-space: normal;
-      color: #848181;
-      font-size: 15px;
-      margin-top: 12px;
-      line-height: 1.4; }
+    .discography__item__info__text {
+      max-width: calc(100% - 196px);
+      overflow: hidden; }
+      .discography__item__info__text h6 {
+        font-size: 25px;
+        padding-top: 24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 1.2; }
+      .discography__item__info__text p {
+        white-space: normal;
+        color: #848181;
+        font-size: 15px;
+        margin-top: 12px;
+        line-height: 1.4; }
   .discography__item__audios {
     margin-top: 36px; }
 
@@ -607,7 +632,7 @@ audio {
     padding: 0 80px; }
     @media (max-width: 976px) {
       .contacts__info {
-        padding: 0 40px; } }
+        padding: 0 24px; } }
     @media (max-width: 668px) {
       .contacts__info {
         flex-direction: column;
@@ -704,7 +729,7 @@ audio {
         padding: 0 20px; } }
     @media (max-width: 1000px) {
       .contacts-wrap {
-        padding: 0 40px; } }
+        padding: 0 24px; } }
     @media (max-width: 668px) {
       .contacts-wrap {
         flex-direction: column;
@@ -1223,6 +1248,23 @@ audio {
              object-fit: cover; }
         .media__video__content__list__preview-active {
           background-color: #B6251D; }
+    @media (max-width: 768px) {
+      .media__video__content {
+        height: auto;
+        flex-wrap: wrap; }
+        .media__video__content__player {
+          width: 100%;
+          height: 436px; }
+        .media__video__content__list {
+          height: auto;
+          margin: 0;
+          width: 100%;
+          margin-top: 24px;
+          white-space: nowrap; }
+          .media__video__content__list__preview {
+            display: inline-flex; }
+            .media__video__content__list__preview:last-child {
+              margin-right: 0; } }
 
 .menu1 .menu-item > a {
   font-family: 'Gilroy-Regular';

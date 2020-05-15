@@ -596,7 +596,7 @@ audio {
         padding: 0 80px;
 
         @media (max-width: 976px) {
-          padding: 0 40px;
+          padding: 0 24px;
         }
 
         @media (max-width: 668px) {
@@ -744,7 +744,7 @@ audio {
         }
 
         @media (max-width: 1000px) {
-            padding: 0 40px;
+            padding: 0 24px;
         }
 
         @media (max-width: 668px) {
@@ -1455,6 +1455,32 @@ audio {
 
                     &-active {
                         background-color: $red;
+                    }
+                }
+            }
+
+            @media (max-width: 768px) {
+                height: auto;
+                flex-wrap: wrap;
+
+                &__player {
+                    width: 100%;
+                    height: 436px;
+                }
+
+                &__list {
+                    height: auto;
+                    margin: 0;
+                    width: 100%;
+                    margin-top: 24px;
+                    white-space: nowrap;
+
+                    &__preview {
+                        display: inline-flex;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
                     }
                 }
             }
