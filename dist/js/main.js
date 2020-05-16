@@ -38,7 +38,10 @@ function closeImagePreview() {
 
 function initializeImagePreview() {
   var closeIcon = document.querySelector(".".concat(IMAGE_PREVIEW_CLASSES.closeIcon));
-  closeIcon.addEventListener('click', closeImagePreview);
+
+  if (closeIcon) {
+    closeIcon.addEventListener('click', closeImagePreview);
+  }
 }
 
 function initializeImagesToPreview() {
