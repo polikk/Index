@@ -1511,6 +1511,32 @@ audio {
                     }
                 }
             }
+
+            @media (max-width: 768px) {
+                height: auto;
+                flex-wrap: wrap;
+
+                &__player {
+                    width: 100%;
+                    height: 436px;
+                }
+
+                &__list {
+                    height: auto;
+                    margin: 0;
+                    width: 100%;
+                    margin-top: 24px;
+                    white-space: nowrap;
+
+                    &__preview {
+                        display: inline-flex;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -1544,12 +1570,8 @@ audio {
     margin: 0;
   }
 .section-form{
-    padding: 60px 0;
-    .section-title{
         text-align: center;
-        color: #000000;
         margin-bottom: 40px;
-    }
 }
 .form-wrap{
     font-family: 'Gilroy';  
@@ -1622,7 +1644,6 @@ audio {
             outline: none;
             font-size: 12px;
             display: block;
-            width: 100%;
             &:required {
                 border-left: 2px solid green;
               }
@@ -1638,8 +1659,5 @@ audio {
         &__label__textarea{
             height: calc(20px * 4);
             resize: none;
-        }
-    }
-}
 @import'media';
 

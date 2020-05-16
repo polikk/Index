@@ -3,6 +3,10 @@
 .discography {
   &__items {
     margin-top: 36px;
+
+    @media (max-width: 1200px) {
+      padding: 0 24px;
+    }
   }
 
   &__item {
@@ -36,29 +40,43 @@
     }
 
     &-closed {
-        img {
-            width: 95px;
-            height: 80px;
-        }
+        .discography__item {
+            &__toggler-close {
+                display: none;
+            }
 
-        p {
-            display: none;
-        }
+            &__toggler-open {
+                display: inline-block;
+                transform: rotate(-90deg) scale(0.6);
 
-        .discography__item__audios {
-            display: none;
-        }
+                &::before{
+                    content: url(../img/left.svg);
+                }
+            }
 
-        .discography__item__toggler-close {
-            display: none;
-        }
+            &__info {
+                img {
+                    width: 95px;
+                    height: 80px;
+                }
 
-        .discography__item__toggler-open {
-            display: inline-block;
-            transform: rotate(-90deg) scale(0.6);
+                &__text {
+                    @media (max-width: 768px) {
+                        h6 {
+                            font-size: 14px;
+                            padding-top: 24px;
+                            white-space: normal;
+                        }
+                    }
 
-            &::before{
-                content: url(../img/left.svg);
+                    p {
+                        display: none;
+                    }
+                }
+            }
+
+            &__audios {
+                display: none;
             }
         }
     }
@@ -73,20 +91,41 @@
             height: 268px;
         }
 
-        p {
-            display: inline-block;
-        }
+        .discography__item {
+            &__toggler-close {
+                display: inline-block;
+            }
 
-        .discography__item__audios {
-            display: block;
-        }
+            &__toggler-open {
+                display: none;
+            }
 
-        .discography__item__toggler-close {
-            display: inline-block;
-        }
+            &__info {
+                    @media (max-width: 768px) {
+                        flex-wrap: wrap;
 
-        .discography__item__toggler-open {
-            display: none;
+                        img {
+                            margin: 24px 0 0 0;
+                            width: 100%;
+                        }
+                    }
+
+                &__text {
+                    max-width: none;
+        
+                    p {
+                        display: inline-block;
+                    }
+            
+                    h6 {
+                        white-space: normal;
+                    }
+                }
+            }
+
+            &__audios {
+                display: block;
+            }
         }
     }
 
@@ -98,17 +137,26 @@
             transition: $transition;
         }
 
-        h6 {
-            font-size: 25px;
-            padding-top: 32px;
-        }
+        &__text {
+            max-width: calc(100% - 196px);
+            overflow: hidden;
 
-        p {
-            white-space: normal;
-            color: $gray;
-            font-size: 15px;
-            margin-top: 12px;
-            line-height: 1.4;
+            h6 {
+                font-size: 25px;
+                padding-top: 24px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                line-height: 1.2;
+            }
+
+            p {
+                white-space: normal;
+                color: $gray;
+                font-size: 15px;
+                margin-top: 12px;
+                line-height: 1.4;
+            }
         }
     }
 
