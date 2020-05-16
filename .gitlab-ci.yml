@@ -32,5 +32,5 @@ pages:
   dependencies:
     - build
 
-  only:
-    - master
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'master'
