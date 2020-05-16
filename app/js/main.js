@@ -43,8 +43,9 @@ function closeImagePreview() {
 
 function initializeImagePreview() {
   const closeIcon = document.querySelector(`.${IMAGE_PREVIEW_CLASSES.closeIcon}`);
-
-  closeIcon.addEventListener('click', closeImagePreview);
+  if (closeIcon) {
+    closeIcon.addEventListener('click', closeImagePreview);
+  }
 }
 
 function initializeImagesToPreview() {
@@ -59,11 +60,6 @@ function initializeImagesToPreview() {
 
 initializeImagePreview();
 initializeImagesToPreview();
-
-
-///end image
-
-
 
 $('.main-info').slick({
     dots: true,
@@ -330,43 +326,49 @@ function processPhotoGalleryView() {
     archiveContentMobile.style.display = 'none';
   }
 }
-
-processPhotoGalleryView();
+try {
+  processPhotoGalleryView();
+}catch (e) {
+  console.error(e);
+}
 
 window.addEventListener('resize', processPhotoGalleryView);
 
 // video
+try {
+  const ACTIVE_PREVIEW_CLASS = 'media__video__content__list__preview-active';
+  const PREVIEW_CLASS = 'media__video__content__list__preview';
+  const PLAYER_ROOT_URL = 'https://www.youtube.com/embed/';
 
-const ACTIVE_PREVIEW_CLASS = 'media__video__content__list__preview-active';
-const PREVIEW_CLASS = 'media__video__content__list__preview';
-const PLAYER_ROOT_URL = 'https://www.youtube.com/embed/';
+  const previews = document.querySelectorAll(`.${PREVIEW_CLASS}`);
+  const player = document.querySelector('.media__video__content__player');
 
-const previews = document.querySelectorAll(`.${PREVIEW_CLASS}`);
-const player = document.querySelector('.media__video__content__player');
+  const setPlayerSrc = (id) => {
+    player.setAttribute('src', `${PLAYER_ROOT_URL}${id}`);
 
-const setPlayerSrc = (id) => {
-  player.setAttribute('src', `${PLAYER_ROOT_URL}${id}`);
-  
-  const currentActivePreview = document.querySelector(`.${ACTIVE_PREVIEW_CLASS}`);;
-  const futureActivePreview = Array.from(previews).find((preview) => preview.dataset.videoid === id);
+    const currentActivePreview = document.querySelector(`.${ACTIVE_PREVIEW_CLASS}`);
+    ;
+    const futureActivePreview = Array.from(previews).find((preview) => preview.dataset.videoid === id);
 
-  if (currentActivePreview) {
-    currentActivePreview.classList.remove(ACTIVE_PREVIEW_CLASS);
-  }
+    if (currentActivePreview) {
+      currentActivePreview.classList.remove(ACTIVE_PREVIEW_CLASS);
+    }
 
-  futureActivePreview.classList.add(ACTIVE_PREVIEW_CLASS);
-};
+    futureActivePreview.classList.add(ACTIVE_PREVIEW_CLASS);
+  };
 
-previews.forEach((preview) => {
-  preview.addEventListener('click', (e) => {
-    const { videoid } = e.target.dataset;
+  previews.forEach((preview) => {
+    preview.addEventListener('click', (e) => {
+      const {videoid} = e.target.dataset;
 
-    setPlayerSrc(videoid);
+      setPlayerSrc(videoid);
+    });
   });
-});
 
-const defaultVideo = previews[0].dataset.videoid;
+  const defaultVideo = previews[0].dataset.videoid;
 
-setPlayerSrc(defaultVideo);
-//
+  setPlayerSrc(defaultVideo);
+} catch (e) {
+  console.error(e);
+}
   

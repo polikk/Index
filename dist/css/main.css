@@ -712,11 +712,7 @@ audio {
     padding: 0 80px; }
     @media (max-width: 976px) {
       .contacts__info {
-<<<<<<< HEAD
         padding: 0 40px; } }
-=======
-        padding: 0 24px; } }
->>>>>>> gitlab/master
     @media (max-width: 668px) {
       .contacts__info {
         flex-direction: column;
@@ -813,11 +809,7 @@ audio {
         padding: 0 20px; } }
     @media (max-width: 1000px) {
       .contacts-wrap {
-<<<<<<< HEAD
         padding: 0 40px; } }
-=======
-        padding: 0 24px; } }
->>>>>>> gitlab/master
     @media (max-width: 668px) {
       .contacts-wrap {
         flex-direction: column;
@@ -1414,7 +1406,6 @@ audio {
   transition: color 0.25s ease-out; }
 
 .footer-colum li {
-<<<<<<< HEAD
   margin: 0; }
 
 .section-form {
@@ -1681,6 +1672,3 @@ audio {
   .community-page .community-wrap a {
     margin: 20px 0;
     width: 100%; } }
-=======
-  margin: 9px 0; }
->>>>>>> gitlab/master

@@ -1624,8 +1624,12 @@ audio {
     margin: 0;
   }
 .section-form{
+    padding: 60px 0;
+    .section-title{
         text-align: center;
+        color: #000000;
         margin-bottom: 40px;
+    }
 }
 .form-wrap{
     font-family: 'Gilroy';  
@@ -1698,6 +1702,7 @@ audio {
             outline: none;
             font-size: 12px;
             display: block;
+            width: 100%;
             &:required {
                 border-left: 2px solid green;
               }
@@ -1713,5 +1718,9 @@ audio {
         &__label__textarea{
             height: calc(20px * 4);
             resize: none;
+        }
+    }
+}
 @import'media';
+
 
