@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
@@ -37,49 +37,33 @@
       </div>
     </header>
     <main>
-      <section class="contacts bg-right">
+      <section class="section-form">
         <div class="container">
-          <h2 class="section-title">Зв’язатися з нами</h2>
-          <div class="contacts__info">
-            <div class="contacts__info__person-description"><img src="https://s7g3.scene7.com/is/image/soloinvest/n00554A?$big_image_web$"/>
-              <h6 class="contacts__info__person-description__name">Асташева Олена Борисівна</h6>
-              <hr/><a class="contacts__info__person-description__email" href="mailto:astasheva@gmail.com">astasheva@gmail.com</a><a class="contacts__info__person-description__phone" href="tel:+380679159990">+380679159990</a>
-            </div>
-            <form class="contacts__info__form">
-              <div class="contacts__info__form__fullname">
-                <div class="contacts__info__form__control">
-                  <div class="label">Ім’я</div>
-                  <input class="input" placeholder="Ваше ім’я"/>
-                </div>
-                <div class="contacts__info__form__control">
-                  <div class="label">Прізвище</div>
-                  <input class="input" placeholder="Ваше прізвище"/>
-                </div>
+          <h2 class="section-title">Form</h2>
+          <div class="form-wrap"> 
+            <form class="form">
+              <div class="form__label">
+                <label class="form__label__title form__label__title--requird" for="1">Замовник</label>
+                <input class="form__label__input" id="1" type="text" name="" required="required"/>
               </div>
-              <div class="label">Пошта</div>
-              <input class="input" placeholder="email@example.com"/>
-              <div class="label">Повідомлення</div>
-              <textarea class="textarea" placeholder="Напишіть текст вашого повідомлення..."></textarea>
-              <div class="contacts__info__form__btn-wrapper">
-                <input class="btn" type="submit" value="Надіслати"/>
+              <div class="form__label">
+                <label class="form__label__title form__label__title--requird" for="1">Телефон</label>
+                <input class="form__label__input" id="1" type="text" name="" required="required"/>
               </div>
+              <div class="form__label">
+                <label class="form__label__title form__label__title--requird" for="1">Email</label>
+                <input class="form__label__input" id="1" type="text" name="" required="required"/>
+              </div>
+              <div class="form__label">
+                <label class="form__label__title" for="1">Дата заходу</label>
+                <input class="form__label__input" id="1" type="text" name=""/>
+              </div>
+              <div class="form__label">
+                <label class="form__label__title" for="1">Зміст запрошення</label>
+                <textarea class="form__label__input form__label__textarea" name=""></textarea>
+              </div>
+              <input class="btn" type="submit" value="Надіслати"/>
             </form>
-          </div>
-        </div>
-      </section>
-      <section class="contacts bg-right">
-        <div class="container"> 
-          <div class="contacts-wrap">
-            <div class="contacts-info">
-              <div class="contacts-about">
-                <h5 class="contacts__title">Наша адреса:</h5>
-                <address class="contacts__text">Україна, Київ-004, вул. Дарвіна, 2,<br>Палац дітей та юнацтва <br>Печерського району</address>
-              </div>
-              <div class="contacts-about">
-                <h5 class="contacts__title">Контакти:</h5><a class="contacts__text" href="tel:+38 (044) 331 43 29">+38 (044) 331 43 29</a><a class="contacts__text" href="tel:+38 (067) 915 99 90">+38 (067) 915 99 90</a><a class="contacts__text" href="mailto:Shchedryk@gmail.com">Shchedryk@gmail.com</a>
-              </div>
-            </div>
-            <div class="contacts-map"><img class="contacts-map__img" src="./img/map.png" alt="" srcset=""/></div>
           </div>
         </div>
       </section>

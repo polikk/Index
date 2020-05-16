@@ -1,3 +1,11 @@
+$(".burger").on('click',function(){
+  document.querySelector(".nav").classList.toggle("show");
+  document.querySelector(".burger").classList.toggle("burger-active");
+  document.querySelector(".dropdown").classList.toggle("dropdown-active");
+});
+
+
+
 $('.main-info').slick({
     dots: true,
     infinite: true,
@@ -5,7 +13,17 @@ $('.main-info').slick({
     autoplay: true,
     autoplaySpeed: 3000,
     slidesToShow: 1,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 998,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+  
+        }
+      }
+    ]
   });
   $('.comunity-part').slick({
     dots: false,
@@ -14,7 +32,25 @@ $('.main-info').slick({
     autoplaySpeed: 3000,
     speed: 300,
     slidesToShow: 3,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    arrows:true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+ 
+          slidesToShow: 1
+        }
+      }
+    ]
   });
   $('.press-slider').slick({
     dots: false,
@@ -24,7 +60,31 @@ $('.main-info').slick({
     swipeToSlide: true,
     speed: 300,
     slidesToShow: 3,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          arrows: true,
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+  
+          slidesToShow: 1
+        }
+      }
+    ]
   });
   
 $('.famuous-slider').slick({
@@ -34,9 +94,36 @@ $('.famuous-slider').slick({
   infinite: true,
   swipeToSlide: true,
   speed: 300,
-  autoplay: true,
+  //autoplay: true,
   autoplaySpeed: 3000,
   adaptiveHeight: true,
+  responsive: [
+    {
+      breakpoint: 998,
+      settings: {
+        arrows:  true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        arrows:  true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+      
+        slidesToShow: 1,
+        slidesToS: 1,
+      }
+    }
+  ]
 });
 $('.news-slider').slick({
   dots: true,
@@ -48,7 +135,8 @@ $('.news-slider').slick({
   swipeToSlide: true,
   speed: 300,
   slidesToShow: 1,
-  adaptiveHeight: true
+  adaptiveHeight: true,
+  
 });
 var $status = $('.pagingInfo');
 var $slickElement = $('.famuous-slider');
@@ -185,3 +273,5 @@ previews.forEach((preview) => {
 const defaultVideo = previews[0].dataset.videoid;
 
 setPlayerSrc(defaultVideo);
+//
+  
