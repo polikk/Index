@@ -1,0 +1,310 @@
+@media only screen and (max-width : 1200px) {
+    .about-famous{
+        .slick-prev{
+            left: 500px;
+            left: 430px;
+              
+          
+        }
+        .slick-next{
+               top: 350px;
+            right: 450px;
+          
+        }
+    }
+   
+    .main-info .main__img{
+        min-height: auto;
+        width: 100%;
+    }
+	.container{
+		max-width: 970px;
+    }
+    .contacts-wrap{
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .about-award{
+        .award-wrap{
+            justify-content: center;
+        }
+    }
+    .about-award .award-wrap .awards:nth-child(3n+2){
+        margin: 0;
+    }
+    .award-wrap :nth-child(3n+2) .awards__text::before{
+        display: none;
+    }
+    .award-wrap :nth-child(3n+2) .awards__text::after{
+        display: none;
+    }
+}
+@media only screen and (max-width : 992px) {
+    .about-famous .slick-slide.slick-current.slick-active.slick-center blockquote{
+        position:static;
+        margin-left: 0;
+    }
+    .about-famous{
+        .slick-prev{
+            left: 500px;
+            left: 310px;
+              
+          
+        }
+        .slick-next{
+               top: 350px;
+            right: 330px;
+          
+        }
+    }
+    .main-info{
+        min-height: auto;
+        .main__img{
+            min-height: auto;
+        }
+    }
+    .about-press .container{
+        padding: inherit;
+    }
+    .form-wrap .form__label--double{
+        flex-direction: column;
+    }
+    .header {
+        .nav{
+            display: none;
+        
+        }
+        
+        .dropdown{
+            display: none;
+        }
+        
+        .burger{
+            margin-right: 40px;
+            display: block;
+        }
+    }
+    
+    
+    
+    .festival{
+        grid-template-columns: 1fr!important;
+    }
+    .about-main{
+        padding-bottom: 0;
+    }
+    .container{
+		max-width: 730px;
+    }
+    .full-news{
+        &-wrapper{
+            flex-wrap: wrap;
+        }
+    }
+    main{
+        padding-bottom: 240px;
+    }
+    .footer{
+        height: 260px;
+        .social__link{
+            &:first-child{
+                margin: 0;
+            }
+        }
+        &-nav{
+            flex-direction: column;
+        }
+    }
+    .about-famous{
+        padding-bottom: 60px;
+    }
+    .about-press{
+        padding: 50px 0;
+    }
+    .community{
+        padding: 30px 0;
+    }
+    .news{
+        padding: 30px 0;
+    }
+    .award{
+        padding: 30px 0;
+    }
+    .family{
+        padding: 30px 0;
+    }
+    .hear{
+        padding: 30px 0;
+    }
+    .main{
+        padding: 80px 0;
+    }
+    .menu2{
+        margin: 20px 0;
+    }
+    .community-page{
+        .community-wrap{
+            justify-content: space-around;
+            a{
+                margin: 30px 0;
+                width:50%;
+            }
+        }
+    }
+}
+.contacts-map{
+   // width: 90%;
+}
+@media only screen and (max-width : 768px) {
+    .about-press .press-slider__card blockquote{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .about-famous{
+        padding-bottom: 60px;
+        .slick-prev{
+            left: 500px;
+            left: 210px;
+              
+          
+        }
+        .slick-next{
+               top: 350px;
+            right: 230px;
+          
+        }
+    }
+    .main__title{
+        margin-left: 0px;
+    }
+    .main__text{
+        margin-left:0;
+    }
+    .main-about{
+        padding: 20px 0 10px;
+        bottom:0px;
+    }
+    .about-press{
+        padding: 20px 0;
+    }
+    .about-press .container{
+        padding:90px;
+    }
+    .about-press{
+        background-image: none;
+    }
+    .contacts-info{
+        text-align: center;
+    }
+    .news{
+        background-image: none;
+    }
+    .full-news{
+        background-image: none;
+        .big-news-card figure{
+            height: 320px;
+        }
+        &-wrapper{
+            justify-content: center;
+        }
+    }
+    .award-wrap{
+        justify-content: center;
+    }
+    .container{
+		max-width: 550px;
+    }
+    
+}
+@media only screen and (max-width : 576px) {
+    .main-header{
+        display: none;
+    }
+    .about-famous{
+        .slick-prev{
+           display: none!important;
+              
+          
+        }
+        .slick-next{
+             display: none!important;
+          
+        }
+    }
+    .container{
+		max-width: 100%;
+		padding:0 20px;
+    }
+  
+    .family-wrap{
+        flex-wrap: wrap;
+        justify-content: center;
+        .section-title{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+}
+@media only screen and (max-width : 480px) {
+    .about-details .festival{
+        padding: initial;
+    }
+    .about-press .container{
+        max-width: 100%;
+        padding: 0 20px;
+    }
+   
+    .full-news .big-news-card figure{
+        height: auto;
+    }
+    main{
+        padding-bottom: 280px;
+    }
+    .footer{
+        height: 280px;
+        .footer-colum{
+            margin-right: 0;
+        }
+    }
+    .award-wrap :nth-child(3n+2) .awards__text::before{
+        left: -70px;
+    }  
+    .award-wrap :nth-child(3n+2) .awards__text::after{
+        right: -75px;
+    } 
+}
+
+// Extra Small Devices, Phones
+@media only screen and (max-width : 380px) {
+    
+        main{
+            padding-top: 200px;
+        }
+    
+    .header-wrap{
+        
+    justify-content: flex-end;
+    flex-direction: column;
+    }
+    .logo{
+        margin-bottom: 10px;
+    }
+    .burger{
+        margin-right: 0px!important;
+        margin-top: 10px;
+    }
+	body{
+        min-width: 320px;
+    }
+    .community-page{
+        .community-wrap{
+            
+            a{
+                margin: 20px 0;
+                width:100%;
+            }
+        }
+    }
+
+}
