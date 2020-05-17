@@ -1399,7 +1399,7 @@ audio {
               margin-right: 0; } }
 
 .menu1 .menu-item > a {
-  font-family: 'Gilroy-Regular';
+  font-family: 'Gilroy';
   color: #848181;
   text-decoration: none; }
 
@@ -1407,8 +1407,14 @@ audio {
   color: #000000;
   transition: color 0.25s ease-out; }
 
+.menu2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 10px 25px; }
+
 .menu2 .menu-item > a {
-  font-family: 'Gilroy-Regular';
+  font-family: 'Gilroy';
   font-size: 18px;
   line-height: 23px;
   text-decoration: none;

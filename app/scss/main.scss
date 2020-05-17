@@ -1610,34 +1610,46 @@ audio {
     }
 }
 
-.menu1 .menu-item>a {
-    font-family: 'Gilroy-Regular';
+//fix for wordpress
+.menu1 .menu-item > a {
+    font-family: 'Gilroy';
     color: #848181;
     text-decoration: none;
-  }
-  
-  .menu-item>a:hover, .menu-item>a :active {
+}
+
+.menu-item > a:hover, .menu-item > a :active {
     color: #000000;
     transition: color 0.25s ease-out;
-  }
-  
-  .menu2 .menu-item>a {
-    font-family: 'Gilroy-Regular';
+}
+
+.menu2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px 25px;
+}
+
+.menu2 .menu-item > a {
+    font-family: 'Gilroy';
     font-size: 18px;
     line-height: 23px;
     text-decoration: none;
     color: #FFFFFF;
     margin: 5px 0;
-  }
-  
-  .menu-item>a:hover, .menu-item>a :active {
+}
+
+.menu-item > a:hover, .menu-item > a :active {
     color: #000000;
     transition: color 0.25s ease-out;
-  }
-  
-  .footer-colum li {
+}
+
+.footer-colum li {
     margin: 0;
-  }
+}
+
+//end fix for wordpress
+
+
 .section-form{
     padding: 60px 0;
     .section-title{
@@ -1736,6 +1748,8 @@ audio {
         }
     }
 }
+
+
 @import'media';
 
 
