@@ -16,13 +16,17 @@ const IMAGE_PREVIEW_CLASSES = {
   image: 'image-preview__image',
 };
 
-function getImagePreviewElement() {
+function getImagePreviewContainer() {
   return document.querySelector(`.${IMAGE_PREVIEW_CLASSES.root}`);
 }
 
+function getImagePreview() {
+  return document.querySelector(`.${IMAGE_PREVIEW_CLASSES.image}`);
+}
+
 function openImagePreview(src) {
-  const imagePreview = getImagePreviewElement();
-  const image = document.querySelector(`.${IMAGE_PREVIEW_CLASSES.image}`);
+  const imagePreview = getImagePreviewContainer();
+  const image = getImagePreview();
 
   image.src = src;
   imagePreview.classList.remove(IMAGE_PREVIEW_CLASSES.closed);
@@ -30,8 +34,8 @@ function openImagePreview(src) {
 }
 
 function closeImagePreview() {
-  const imagePreview = getImagePreviewElement();
-  const image = document.querySelector(`.${IMAGE_PREVIEW_CLASSES.image}`);
+  const imagePreview = getImagePreviewContainer();
+  const image = getImagePreview();
 
   imagePreview.classList.add(IMAGE_PREVIEW_CLASSES.closed);
   imagePreview.classList.remove(IMAGE_PREVIEW_CLASSES.opened);
@@ -42,9 +46,14 @@ function closeImagePreview() {
 }
 
 function initializeImagePreview() {
-  const closeIcon = document.querySelector(`.${IMAGE_PREVIEW_CLASSES.closeIcon}`);
-  if (closeIcon) {
-    closeIcon.addEventListener('click', closeImagePreview);
+  // const closeIcon = document.querySelector(`.${IMAGE_PREVIEW_CLASSES.closeIcon}`);
+  // if (closeIcon) {
+  //   closeIcon.addEventListener('click', closeImagePreview);
+  // }
+  const imagePreview = getImagePreviewContainer();
+
+  if (imagePreview) {
+    imagePreview.addEventListener('click', closeImagePreview);
   }
 }
 
@@ -58,7 +67,7 @@ function initializeImagesToPreview() {
   });
 }
 
-if (getImagePreviewElement()) {
+if (getImagePreviewContainer()) {
   initializeImagePreview();
   initializeImagesToPreview();
 }
@@ -316,26 +325,6 @@ allYearsMobile.forEach((year) => {
     parentNode.classList.add(activeClass);
   });
 });
-
-const archiveContentDesktop = document.querySelector('.media__archive__content');
-const archiveContentMobile = document.querySelector('.media__archive__content-mobile');
-
-function processPhotoGalleryView() {
-  if (!archiveContentDesktop || !archiveContentMobile) {
-    return;
-  }
-
-  if (window.innerWidth <= 768) {
-    archiveContentDesktop.style.display = 'none';
-    archiveContentMobile.style.display = 'block';
-  } else {
-    archiveContentDesktop.style.display = 'flex';
-    archiveContentMobile.style.display = 'none';
-  }
-}
-
-processPhotoGalleryView();
-window.addEventListener('resize', processPhotoGalleryView);
 
 // video
 const ACTIVE_PREVIEW_CLASS = 'media__video__content__list__preview-active';

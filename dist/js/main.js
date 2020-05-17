@@ -14,21 +14,25 @@ var IMAGE_PREVIEW_CLASSES = {
   image: 'image-preview__image'
 };
 
-function getImagePreviewElement() {
+function getImagePreviewContainer() {
   return document.querySelector(".".concat(IMAGE_PREVIEW_CLASSES.root));
 }
 
+function getImagePreview() {
+  return document.querySelector(".".concat(IMAGE_PREVIEW_CLASSES.image));
+}
+
 function openImagePreview(src) {
-  var imagePreview = getImagePreviewElement();
-  var image = document.querySelector(".".concat(IMAGE_PREVIEW_CLASSES.image));
+  var imagePreview = getImagePreviewContainer();
+  var image = getImagePreview();
   image.src = src;
   imagePreview.classList.remove(IMAGE_PREVIEW_CLASSES.closed);
   imagePreview.classList.add(IMAGE_PREVIEW_CLASSES.opened);
 }
 
 function closeImagePreview() {
-  var imagePreview = getImagePreviewElement();
-  var image = document.querySelector(".".concat(IMAGE_PREVIEW_CLASSES.image));
+  var imagePreview = getImagePreviewContainer();
+  var image = getImagePreview();
   imagePreview.classList.add(IMAGE_PREVIEW_CLASSES.closed);
   imagePreview.classList.remove(IMAGE_PREVIEW_CLASSES.opened);
   setTimeout(function () {
@@ -37,10 +41,14 @@ function closeImagePreview() {
 }
 
 function initializeImagePreview() {
-  var closeIcon = document.querySelector(".".concat(IMAGE_PREVIEW_CLASSES.closeIcon));
+  // const closeIcon = document.querySelector(`.${IMAGE_PREVIEW_CLASSES.closeIcon}`);
+  // if (closeIcon) {
+  //   closeIcon.addEventListener('click', closeImagePreview);
+  // }
+  var imagePreview = getImagePreviewContainer();
 
-  if (closeIcon) {
-    closeIcon.addEventListener('click', closeImagePreview);
+  if (imagePreview) {
+    imagePreview.addEventListener('click', closeImagePreview);
   }
 }
 
@@ -53,7 +61,7 @@ function initializeImagesToPreview() {
   });
 }
 
-if (getImagePreviewElement()) {
+if (getImagePreviewContainer()) {
   initializeImagePreview();
   initializeImagesToPreview();
 }
@@ -265,26 +273,7 @@ allYearsMobile.forEach(function (year) {
 
     parentNode.classList.add(activeClass);
   });
-});
-var archiveContentDesktop = document.querySelector('.media__archive__content');
-var archiveContentMobile = document.querySelector('.media__archive__content-mobile');
-
-function processPhotoGalleryView() {
-  if (!archiveContentDesktop || !archiveContentMobile) {
-    return;
-  }
-
-  if (window.innerWidth <= 768) {
-    archiveContentDesktop.style.display = 'none';
-    archiveContentMobile.style.display = 'block';
-  } else {
-    archiveContentDesktop.style.display = 'flex';
-    archiveContentMobile.style.display = 'none';
-  }
-}
-
-processPhotoGalleryView();
-window.addEventListener('resize', processPhotoGalleryView); // video
+}); // video
 
 var ACTIVE_PREVIEW_CLASS = 'media__video__content__list__preview-active';
 var PREVIEW_CLASS = 'media__video__content__list__preview';
