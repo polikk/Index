@@ -835,7 +835,8 @@ audio {
     margin-right: 16px; }
     @media (max-width: 1200px) {
       .contacts-info {
-        width: 100%; } }
+        width: 100%;
+        padding: 16px 0; } }
   .contacts__title {
     font-family: 'Gilroy';
     font-weight: 500;
