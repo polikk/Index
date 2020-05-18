@@ -4,7 +4,68 @@ $(".burger").on('click', function () {
   document.querySelector(".nav").classList.toggle("show");
   document.querySelector(".burger").classList.toggle("burger-active");
   document.querySelector(".dropdown").classList.toggle("dropdown-active");
-});
+}); // image preview
+
+var IMAGE_PREVIEW_CLASSES = {
+  root: 'image-preview',
+  closed: 'image-preview-closed',
+  opened: 'image-preview-opened',
+  closeIcon: 'image-preview__close-icon',
+  image: 'image-preview__image'
+};
+
+function getImagePreviewContainer() {
+  return document.querySelector(".".concat(IMAGE_PREVIEW_CLASSES.root));
+}
+
+function getImagePreview() {
+  return document.querySelector(".".concat(IMAGE_PREVIEW_CLASSES.image));
+}
+
+function openImagePreview(src) {
+  var imagePreview = getImagePreviewContainer();
+  var image = getImagePreview();
+  image.src = src;
+  imagePreview.classList.remove(IMAGE_PREVIEW_CLASSES.closed);
+  imagePreview.classList.add(IMAGE_PREVIEW_CLASSES.opened);
+}
+
+function closeImagePreview() {
+  var imagePreview = getImagePreviewContainer();
+  var image = getImagePreview();
+  imagePreview.classList.add(IMAGE_PREVIEW_CLASSES.closed);
+  imagePreview.classList.remove(IMAGE_PREVIEW_CLASSES.opened);
+  setTimeout(function () {
+    image.src = '';
+  }, 300);
+}
+
+function initializeImagePreview() {
+  // const closeIcon = document.querySelector(`.${IMAGE_PREVIEW_CLASSES.closeIcon}`);
+  // if (closeIcon) {
+  //   closeIcon.addEventListener('click', closeImagePreview);
+  // }
+  var imagePreview = getImagePreviewContainer();
+
+  if (imagePreview) {
+    imagePreview.addEventListener('click', closeImagePreview);
+  }
+}
+
+function initializeImagesToPreview() {
+  var allImages = document.querySelectorAll('.image-to-preview');
+  allImages.forEach(function (img) {
+    img.addEventListener('click', function (e) {
+      openImagePreview(e.target.src);
+    });
+  });
+}
+
+if (getImagePreviewContainer()) {
+  initializeImagePreview();
+  initializeImagesToPreview();
+}
+
 $('.main-info').slick({
   dots: true,
   infinite: true,
@@ -129,7 +190,7 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
 var discographyOpenTogglers = document.querySelectorAll('.discography__item__toggler-open');
 var TOGGLE_DISCOGRAPHY_CLASSES = {
   opened: 'discography__item-opened',
-  closed: 'discography__item-closeed'
+  closed: 'discography__item-closed'
 };
 discographyOpenTogglers.forEach(function (toggler) {
   toggler.addEventListener('click', function (e) {
@@ -196,6 +257,22 @@ allYears.forEach(function (year) {
     terminateSlider();
     initializeSlider();
   });
+}); // photogallery mobile
+
+var allYearsMobile = document.querySelectorAll('.media__archive__content-mobile__items__item__year');
+allYearsMobile.forEach(function (year) {
+  year.addEventListener('click', function (_ref) {
+    var target = _ref.target;
+    var parentNode = target.parentNode;
+    var activeClass = 'media__archive__content-mobile__items__item-opened';
+
+    if (parentNode.classList.contains(activeClass)) {
+      parentNode.classList.remove(activeClass);
+      return;
+    }
+
+    parentNode.classList.add(activeClass);
+  });
 }); // video
 
 var ACTIVE_PREVIEW_CLASS = 'media__video__content__list__preview-active';
@@ -207,7 +284,6 @@ var player = document.querySelector('.media__video__content__player');
 var setPlayerSrc = function setPlayerSrc(id) {
   player.setAttribute('src', "".concat(PLAYER_ROOT_URL).concat(id));
   var currentActivePreview = document.querySelector(".".concat(ACTIVE_PREVIEW_CLASS));
-  ;
   var futureActivePreview = Array.from(previews).find(function (preview) {
     return preview.dataset.videoid === id;
   });
@@ -219,11 +295,13 @@ var setPlayerSrc = function setPlayerSrc(id) {
   futureActivePreview.classList.add(ACTIVE_PREVIEW_CLASS);
 };
 
-previews.forEach(function (preview) {
-  preview.addEventListener('click', function (e) {
-    var videoid = e.target.dataset.videoid;
-    setPlayerSrc(videoid);
+if (previews && previews.length) {
+  previews.forEach(function (preview) {
+    preview.addEventListener('click', function (e) {
+      var videoid = e.target.dataset.videoid;
+      setPlayerSrc(videoid);
+    });
   });
-});
-var defaultVideo = previews[0].dataset.videoid;
-setPlayerSrc(defaultVideo); //
+  var defaultVideo = previews[0].dataset.videoid;
+  setPlayerSrc(defaultVideo);
+}

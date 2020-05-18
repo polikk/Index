@@ -4,6 +4,7 @@
 @import 'variables';
 
 @import './components/discography.scss';
+@import './components/image-preview.scss';
 
 * {
     box-sizing: border-box;
@@ -650,11 +651,11 @@ audio {
         justify-content: space-between;
         padding: 0 80px;
 
-        @media (max-width: 976px) {
-          padding: 0 40px;
+        @media (max-width: 992px) {
+          padding: 0;
         }
 
-        @media (max-width: 668px) {
+        @media (max-width: 768px) {
             flex-direction: column;
             align-items: center;
         }
@@ -683,7 +684,7 @@ audio {
                 line-height: 1.4;
             }
 
-            @media (max-width: 668px) {
+            @media (max-width: 768px) {
                 width: 100%;
                 margin-bottom: 32px;
 
@@ -743,7 +744,7 @@ audio {
               width: calc(100% - #{$person-width + 20px});
             }
 
-            @media (max-width: 668px) {
+            @media (max-width: 768px) {
                 width: 100%;
             }
 
@@ -798,8 +799,8 @@ audio {
             padding: 0 20px;
         }
 
-        @media (max-width: 1000px) {
-            padding: 0 40px;
+        @media (max-width: 992px) {
+            padding: 0;
         }
 
         @media (max-width: 668px) {
@@ -814,8 +815,9 @@ audio {
             width: 60%;
         }
 
-        @media (max-width: 668px) {
+        @media (max-width: 1200px) {
             width: 100%;
+            margin-bottom: 24px;
         }
 
         section, iframe, img {
@@ -830,9 +832,9 @@ audio {
         background-color: white;
         margin-right: 16px;
 
-        @media (max-width: 668px) {
-            margin-bottom: 24px;
+        @media (max-width: 1200px) {
             width: 100%;
+            padding: 16px 0;
         }
     }
     &__title{
@@ -1356,11 +1358,18 @@ audio {
 
 .media {
     &__archive {
+        @media (max-width: 1200px) {
+            padding: 0;
+        }
+
         &__content {
-            display: flex;
+            display: none;
             align-items: flex-start;
-            // height: 100px;
             margin-top: 24px;
+
+            @media (min-width: 769px){
+                display: flex;
+            }
 
             $years-width: 172px;
 
@@ -1404,6 +1413,7 @@ audio {
                         grid-template-columns: 33.33% 33.33% 33.33%;
 
                         img {
+                            cursor: pointer;
                             height: 175px;
                             width: 100%;
                             object-fit: cover;
@@ -1448,12 +1458,71 @@ audio {
                 }
             }
         }
+
+        &__content-mobile {
+            display: none;
+            margin-top: 36px;
+
+            @media (max-width: 768px){
+                display: block;
+            }
+
+            &__items {
+                &__item {
+                    width: 100%;
+                    box-shadow: $box-shadow;
+                    margin-bottom: 8px;
+                    background-color: white;
+
+                    &-opened {
+                        .media__archive__content-mobile__items__item__year {
+                            background-color: $red;
+                            color: white;
+                            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                            margin-bottom: 16px;
+                        }
+
+                        .media__archive__content-mobile__items__item__photos {
+                            height: 500px;
+                            display: block;
+                        }
+                    }
+
+                    &__year {
+                        cursor: pointer;
+                        font-size: 20px;
+                        text-align: center;
+                        padding: 16px;
+                        transition: .3s;
+                    }
+
+                    &__photos {
+                        overflow-y: auto;
+                        overflow-x: hidden;
+                        height: 0;
+                        transition: .3s;
+
+                        img {
+                            width: 100%;
+                            height: 260px;
+                            object-fit: cover;
+                            padding: 0 16px 16px;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &__video {
         background-color: $gray2;
         padding: 48px 24px 60px;
         margin-bottom: 48px;
+
+        @media (max-width: 576px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
 
         &__content {
             margin-top: 48px;
@@ -1511,38 +1580,76 @@ audio {
                     }
                 }
             }
+
+            @media (max-width: 768px) {
+                height: auto;
+                flex-wrap: wrap;
+
+                &__player {
+                    width: 100%;
+                    height: 436px;
+                }
+
+                &__list {
+                    height: auto;
+                    margin: 0;
+                    width: 100%;
+                    margin-top: 24px;
+                    white-space: nowrap;
+
+                    &__preview {
+                        display: inline-flex;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
-.menu1 .menu-item>a {
-    font-family: 'Gilroy-Regular';
+//fix for wordpress
+.menu1 .menu-item > a {
+    font-family: 'Gilroy';
     color: #848181;
     text-decoration: none;
-  }
-  
-  .menu-item>a:hover, .menu-item>a :active {
+}
+
+.menu-item > a:hover, .menu-item > a :active {
     color: #000000;
     transition: color 0.25s ease-out;
-  }
-  
-  .menu2 .menu-item>a {
-    font-family: 'Gilroy-Regular';
+}
+
+.menu2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px 25px;
+}
+
+.menu2 .menu-item > a {
+    font-family: 'Gilroy';
     font-size: 18px;
     line-height: 23px;
     text-decoration: none;
     color: #FFFFFF;
     margin: 5px 0;
-  }
-  
-  .menu-item>a:hover, .menu-item>a :active {
+}
+
+.menu-item > a:hover, .menu-item > a :active {
     color: #000000;
     transition: color 0.25s ease-out;
-  }
-  
-  .footer-colum li {
+}
+
+.footer-colum li {
     margin: 0;
-  }
+}
+
+//end fix for wordpress
+
+
 .section-form{
     padding: 60px 0;
     .section-title{
@@ -1641,5 +1748,8 @@ audio {
         }
     }
 }
+
+
 @import'media';
+
 

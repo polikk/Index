@@ -1,0 +1,37 @@
+.image-preview {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, .5);
+    transition: .4s;
+
+    &-closed {
+        opacity: 0;
+        z-index: -1;
+    }
+
+    &-opened {
+        opacity: 1;
+        z-index: 9999;
+    }
+
+    &__close-icon {
+        cursor: pointer;
+        font-size: 36px;
+        color: black;
+        position: absolute;
+        top: 36px;
+        right: 36px;
+    }
+
+    &__image {
+        object-fit: contain;
+        width: 88%;
+        max-height: 85%;
+        display: block;
+        margin: 6% auto 0;
+    }
+}
