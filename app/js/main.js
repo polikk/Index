@@ -1,16 +1,82 @@
 $(".burger").on('click',function(){
   document.querySelector(".nav").classList.toggle("show");
   document.querySelector(".burger").classList.toggle("burger-active");
-  document.querySelector(".dropdown").classList.toggle("dropdown-active");
 });
 
+
+
+// image preview
+
+const IMAGE_PREVIEW_CLASSES = {
+  root: 'image-preview',
+  closed: 'image-preview-closed',
+  opened: 'image-preview-opened',
+  closeIcon: 'image-preview__close-icon',
+  image: 'image-preview__image',
+};
+
+function getImagePreviewContainer() {
+  return document.querySelector(`.${IMAGE_PREVIEW_CLASSES.root}`);
+}
+
+function getImagePreview() {
+  return document.querySelector(`.${IMAGE_PREVIEW_CLASSES.image}`);
+}
+
+function openImagePreview(src) {
+  const imagePreview = getImagePreviewContainer();
+  const image = getImagePreview();
+
+  image.src = src;
+  imagePreview.classList.remove(IMAGE_PREVIEW_CLASSES.closed);
+  imagePreview.classList.add(IMAGE_PREVIEW_CLASSES.opened);
+}
+
+function closeImagePreview() {
+  const imagePreview = getImagePreviewContainer();
+  const image = getImagePreview();
+
+  imagePreview.classList.add(IMAGE_PREVIEW_CLASSES.closed);
+  imagePreview.classList.remove(IMAGE_PREVIEW_CLASSES.opened);
+
+  setTimeout(() => {
+    image.src = '';
+  }, 300);
+}
+
+function initializeImagePreview() {
+  // const closeIcon = document.querySelector(`.${IMAGE_PREVIEW_CLASSES.closeIcon}`);
+  // if (closeIcon) {
+  //   closeIcon.addEventListener('click', closeImagePreview);
+  // }
+  const imagePreview = getImagePreviewContainer();
+
+  if (imagePreview) {
+    imagePreview.addEventListener('click', closeImagePreview);
+  }
+}
+
+function initializeImagesToPreview() {
+  const allImages = document.querySelectorAll('.image-to-preview');
+
+  allImages.forEach((img) => {
+    img.addEventListener('click', (e) => {
+      openImagePreview(e.target.src);
+    });
+  });
+}
+
+if (getImagePreviewContainer()) {
+  initializeImagePreview();
+  initializeImagesToPreview();
+}
 
 
 $('.main-info').slick({
     dots: true,
     infinite: true,
     speed: 300,
-    autoplay: true,
+    //autoplay: true,
     autoplaySpeed: 3000,
     slidesToShow: 1,
     adaptiveHeight: true,
@@ -153,7 +219,7 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
 const discographyOpenTogglers = document.querySelectorAll('.discography__item__toggler-open');
 const TOGGLE_DISCOGRAPHY_CLASSES = {
   opened: 'discography__item-opened',
-  closed: 'discography__item-closeed',
+  closed: 'discography__item-closed',
 };
 
 
@@ -240,8 +306,26 @@ allYears.forEach((year) => {
   });
 });
 
-// video
+// photogallery mobile
 
+const allYearsMobile = document.querySelectorAll('.media__archive__content-mobile__items__item__year');
+
+allYearsMobile.forEach((year) => {
+  year.addEventListener('click', ({ target }) => {
+    const { parentNode } = target;
+    const activeClass = 'media__archive__content-mobile__items__item-opened';
+
+    if (parentNode.classList.contains(activeClass)) {
+      parentNode.classList.remove(activeClass);
+
+      return;
+    }
+
+    parentNode.classList.add(activeClass);
+  });
+});
+
+// video
 const ACTIVE_PREVIEW_CLASS = 'media__video__content__list__preview-active';
 const PREVIEW_CLASS = 'media__video__content__list__preview';
 const PLAYER_ROOT_URL = 'https://www.youtube.com/embed/';
@@ -251,8 +335,8 @@ const player = document.querySelector('.media__video__content__player');
 
 const setPlayerSrc = (id) => {
   player.setAttribute('src', `${PLAYER_ROOT_URL}${id}`);
-  
-  const currentActivePreview = document.querySelector(`.${ACTIVE_PREVIEW_CLASS}`);;
+
+  const currentActivePreview = document.querySelector(`.${ACTIVE_PREVIEW_CLASS}`);
   const futureActivePreview = Array.from(previews).find((preview) => preview.dataset.videoid === id);
 
   if (currentActivePreview) {
@@ -262,16 +346,17 @@ const setPlayerSrc = (id) => {
   futureActivePreview.classList.add(ACTIVE_PREVIEW_CLASS);
 };
 
-previews.forEach((preview) => {
-  preview.addEventListener('click', (e) => {
-    const { videoid } = e.target.dataset;
-
-    setPlayerSrc(videoid);
+if (previews && previews.length) {
+  previews.forEach((preview) => {
+    preview.addEventListener('click', (e) => {
+      const { videoid } = e.target.dataset;
+  
+      setPlayerSrc(videoid);
+    });
   });
-});
-
-const defaultVideo = previews[0].dataset.videoid;
-
-setPlayerSrc(defaultVideo);
-//
+  
+  const defaultVideo = previews[0].dataset.videoid;
+  
+  setPlayerSrc(defaultVideo);
+}
   

@@ -27,22 +27,24 @@
               <li><a class="nav__link" href="community.html">Спільнота</a></li>
               <li><a class="nav__link" href="#">Запросити нас</a></li>
               <li><a class="nav__link" href="contact.html">Контакти</a></li>
+              <li>
+                <div class="dropdown"><a class="default nav__link" href="#">Укр<img src="./img/arrow_down.svg" alt="" srcset=""/></a>
+                  <div class="dropdown-content"><a class="nav__link" href="#">Eng</a></div>
+                </div>
+              </li>
             </ul>
-          </nav>
-          <div class="dropdown"><a class="default nav__link" href="#">Укр<img src="./img/arrow_down.svg" alt="" srcset=""/></a>
-            <div class="dropdown-content"><a class="nav__link" href="#">Eng</a></div>
-          </div><a class="btn" href="http://">Підтримати</a>
+          </nav><a class="btn" href="http://">Підтримати</a>
           <div class="burger"><span class="change1"></span><span class="change2"></span><span class="change3"></span></div>
         </div>
       </div>
     </header>
     <main>
-      <section class="section-form">
+      <section class="section-form bg-right">
         <div class="container">
-          <h2 class="section-title">Form</h2>
+          <h2 class="section-title">Записатися на прослуховування </h2>
           <div class="form-wrap"> 
             <form class="form">
-              <h3 class="form__title">Потрапити на прослуховування ви можете упродовж навчального року.<br/>Для цього потрібно прийти на репетицію хору у п’ятницю о 16:30 або неділю о 10:00 за адресою: Київ 02000, вул. Дарвіна 2, ПДЮ Печерського р-ну.</h3>
+              <h3 class="form__title">Потрапити на прослуховування ви можете упродовж навчального року.<br/>Для цього потрібно прийти на репетицію хору в п’ятницю о 16:30 або неділю о 10:00 за адресою: м. Київ 02000, вул. Дарвіна 2, ПДЮ Печерського р-ну.</h3>
               <div class="form__label">
                 <label class="form__label__title form__label__title--requird" for="1">Прізвище</label>
                 <input class="form__label__input" id="1" type="text" name="" required="required"/>
@@ -59,21 +61,22 @@
                 <label class="form__label__title" for="">Email</label>
                 <input class="form__label__input" id="1" type="text" name=""/>
               </div>
-              <div class="form__label--double">
+              <div class="form__label">
                 <div class="form__label">
                   <label class="form__label__title form__label__title--requird" for="">Номер телефону</label>
                   <p>Для дитини - контактний номер одного з батьків</p>
                   <input class="form__label__input" id="1" type="text" name="" required="required" placeholder="380хххххххххххххххх"/>
                 </div>
-                <div class="form__label">
-                  <label class="form__label__title" for="">ПІБ</label>
+              </div>
+              <div class="form__label">
+                <label class="form__label__title" for="">ПІБ
                   <p>ПІБ контактної особи чи одного з батьків</p>
-                  <input class="form__label__input" id="1" type="text" name=""/>
-                </div>
+                </label>
+                <input class="form__label__input" id="1" type="text" name=""/>
               </div>
               <div class="form__label">
                 <label class="form__label__title form__label__title--requird" for="">Дата народження</label>
-                <input class="form__label__input" id="1" type="text" name="" required="required"/>
+                <input class="form__label__input" id="1" type="date" name="" required="required"/>
               </div>
               <div class="form__label">
                 <label class="form__label__title" for="">Місце навчання</label>
@@ -92,7 +95,7 @@
                 <label class="form__label__title" for="">Клас/курс</label>
                 <input class="form__label__input" id="1" type="text" name=""/>
               </div>
-              <p class="form__text">Для зворотнього зв'язку: +380930000000</p>
+              <p class="form__text"> </p>
               <input class="btn" type="submit" value="Надіслати"/>
             </form>
           </div>

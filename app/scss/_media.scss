@@ -76,9 +76,6 @@
         
         }
         
-        .dropdown{
-            display: none;
-        }
         
         .burger{
             margin-right: 40px;
@@ -157,6 +154,32 @@
    // width: 90%;
 }
 @media only screen and (max-width : 768px) {
+    .main-header{
+        top: -40px;}
+        
+    .header .show ul{
+        height: 80vh;
+        
+        & li{
+            position: relative;
+             &::after{
+                position: absolute;
+                content: '';
+                width: 80vw;
+                height: 2px;
+                bottom: -30px;
+                left: 50%;
+                transform: translate(-50%);
+                background: #848181;
+             }
+             &:last-child{
+                &::after{
+                    display: none;
+                } 
+            }
+        }
+       
+    }
     .about-press .press-slider__card blockquote{
         width: 90%;
         margin: 0 auto;
@@ -183,7 +206,7 @@
     }
     .main-about{
         padding: 20px 0 10px;
-        bottom:0px;
+        bottom:-20px;
     }
     .about-press{
         padding: 20px 0;
@@ -218,8 +241,65 @@
     
 }
 @media only screen and (max-width : 576px) {
+    .bg-right{
+        background-image: none;
+    }
+    .about-main__subtitle{
+        font-size: 20px;
+    }
+    .award .awards__title{
+        font-size: 55px;
+    }
+    .about-details .festival li{
+        font-size: 16px;
+    }
+    .about-main__text{
+        font-size: 16px;
+    }
+   .main{
+     padding-top: 80px;
+     padding-bottom: 20px;
+   }
+    .section-title{
+        font-size: 30px;
+    }
+    .award .awards__text{
+        font-size: 18px;
+    }
+    .article__title{
+        font-size: 20px;
+    }
+    .article__text{
+        font-size: 18px;
+    }
+    .main.year{
+        margin-right: -50px;
+    }
+    .main .year span{
+        font-size: 20px;
+        text-align: center;
+        
+    }
     .main-header{
-        display: none;
+        top: -50px;
+        .main__subtitle{
+            font-size: 18px;
+            position: absolute;
+            margin-left: -40px;
+        }
+        .main__title{
+            font-size: 25px;
+            margin-right: -80px;    
+        }
+    }
+    .main-about{
+     .main__text{
+         display: none;
+     }
+     .btn-about{
+         margin-bottom: 40px;
+         margin-left: 20px;
+     }
     }
     .about-famous{
         .slick-prev{
@@ -247,6 +327,12 @@
     }
 }
 @media only screen and (max-width : 480px) {
+    .about-famous .slick-slide.slick-current.slick-active.slick-center .famous-text{
+        font-size: 10px;
+    }
+    .header .burger{
+        margin-right: 20px;
+    }
     .about-details .festival{
         padding: initial;
     }
@@ -277,22 +363,56 @@
 
 // Extra Small Devices, Phones
 @media only screen and (max-width : 380px) {
+    .main .year{
+        margin-right: -10px;
+    }
+    .main-header .main__title{
+        margin-right: -60px;
+    }
+    .form-wrap .form__title{
+        font-size: 18px;
+    }
+    .main-header{
+        top: -80px;
+    }
+    .main-about{
+        bottom: 0;
+        .btn-about{
+            font-size: 18px;
+        }
+    }
+    .main{
+        padding-bottom: 20px;
+        padding-top: 80px;
+     }
     
         main{
-            padding-top: 200px;
+            padding-top: 140px;
         }
-    
+    .header{
+        .container{
+            padding:0 10px ;
+        }
+    }
     .header-wrap{
         
-    justify-content: flex-end;
-    flex-direction: column;
+    
+    flex-wrap: wrap;
+    .logo{
+        width: 100px;
+        height: 100px;
+        
+        & a {
+            display: flex;
+        }
+    }
     }
     .logo{
         margin-bottom: 10px;
     }
     .burger{
         margin-right: 0px!important;
-        margin-top: 10px;
+       
     }
 	body{
         min-width: 320px;

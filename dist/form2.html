@@ -27,19 +27,21 @@
               <li><a class="nav__link" href="community.html">Спільнота</a></li>
               <li><a class="nav__link" href="#">Запросити нас</a></li>
               <li><a class="nav__link" href="contact.html">Контакти</a></li>
+              <li>
+                <div class="dropdown"><a class="default nav__link" href="#">Укр<img src="./img/arrow_down.svg" alt="" srcset=""/></a>
+                  <div class="dropdown-content"><a class="nav__link" href="#">Eng</a></div>
+                </div>
+              </li>
             </ul>
-          </nav>
-          <div class="dropdown"><a class="default nav__link" href="#">Укр<img src="./img/arrow_down.svg" alt="" srcset=""/></a>
-            <div class="dropdown-content"><a class="nav__link" href="#">Eng</a></div>
-          </div><a class="btn" href="http://">Підтримати</a>
+          </nav><a class="btn" href="http://">Підтримати</a>
           <div class="burger"><span class="change1"></span><span class="change2"></span><span class="change3"></span></div>
         </div>
       </div>
     </header>
     <main>
-      <section class="section-form">
+      <section class="section-form bg-right">
         <div class="container">
-          <h2 class="section-title">Form</h2>
+          <h2 class="section-title">Запросити нас</h2>
           <div class="form-wrap"> 
             <form class="form">
               <div class="form__label">
@@ -56,12 +58,13 @@
               </div>
               <div class="form__label">
                 <label class="form__label__title" for="1">Дата заходу</label>
-                <input class="form__label__input" id="1" type="text" name=""/>
+                <input class="form__label__input" id="1" type="date" name=""/>
               </div>
               <div class="form__label">
                 <label class="form__label__title" for="1">Зміст запрошення</label>
                 <textarea class="form__label__input form__label__textarea" name=""></textarea>
               </div>
+              <p class="form__text"> </p>
               <input class="btn" type="submit" value="Надіслати"/>
             </form>
           </div>

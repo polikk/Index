@@ -16,9 +16,9 @@ html(lang="en")
     body
         include partials/header
         main
-           section.section-form
+           section.section-form.bg-right
             .container
-                h2.section-title Form
+                h2.section-title Запросити нас
                 .form-wrap  
                     form.form
                         .form__label
@@ -32,10 +32,11 @@ html(lang="en")
                             input.form__label__input#1(type="text", name="" ,required)
                         .form__label
                             label.form__label__title(for="1") Дата заходу
-                            input.form__label__input#1(type="text", name="" )
+                            input.form__label__input#1(type="date", name="" )
                         .form__label
                             label.form__label__title(for="1") Зміст запрошення
                             textarea.form__label__input.form__label__textarea(name="",)
+                        p.form__text 
                         input.btn(type="submit", value="Надіслати")
         include partials/footer
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")

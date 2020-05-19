@@ -16,14 +16,14 @@ html(lang="en")
     body
         include partials/header
         main
-           section.section-form
+           section.section-form.bg-right
              .container
-                h2.section-title Form
+                h2.section-title Записатися на прослуховування 
                 .form-wrap  
                     form.form
                         h3.form__title Потрапити на прослуховування ви можете упродовж навчального року.
                             br
-                            | Для цього потрібно прийти на репетицію хору у п’ятницю о 16:30 або неділю о 10:00 за адресою: Київ 02000, вул. Дарвіна 2, ПДЮ Печерського р-ну.
+                            | Для цього потрібно прийти на репетицію хору в п’ятницю о 16:30 або неділю о 10:00 за адресою: м. Київ 02000, вул. Дарвіна 2, ПДЮ Печерського р-ну.
                         .form__label
                             label.form__label__title.form__label__title--requird(for="1") Прізвище
                             input.form__label__input#1(type="text", name="" ,required)
@@ -36,18 +36,18 @@ html(lang="en")
                         .form__label
                             label.form__label__title(for="") Email
                             input.form__label__input#1(type="text", name="")
-                        .form__label--double
+                        .form__label
                             .form__label
                                 label.form__label__title.form__label__title--requird(for="") Номер телефону
                                 p Для дитини - контактний номер одного з батьків
                                 input.form__label__input#1(type="text", name="",required,placeholder="380хххххххххххххххх")
-                            .form__label
-                                label.form__label__title(for="") ПІБ
-                                p ПІБ контактної особи чи одного з батьків
-                                input.form__label__input#1(type="text", name="")
+                        .form__label
+                            label.form__label__title(for="") ПІБ
+                             p ПІБ контактної особи чи одного з батьків
+                            input.form__label__input#1(type="text", name="")
                         .form__label
                             label.form__label__title.form__label__title--requird(for="") Дата народження
-                            input.form__label__input#1(type="text", name="",required)
+                            input.form__label__input#1(type="date", name="",required)
                         .form__label
                             label.form__label__title(for="") Місце навчання
                             select.form__label__input#1(type="text", name="")
@@ -61,7 +61,7 @@ html(lang="en")
                         .form__label
                             label.form__label__title(for="") Клас/курс
                             input.form__label__input#1(type="text", name="")
-                        p.form__text Для зворотнього зв'язку: +380930000000
+                        p.form__text 
                         input.btn(type="submit", value="Надіслати")
         include partials/footer
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
