@@ -41,6 +41,8 @@
     }
 }
 @media only screen and (max-width : 992px) {
+    .main .image{height:auto}
+    .main .main__img{height:auto}
     .about-famous .slick-slide.slick-current.slick-active.slick-center blockquote{
         position:static;
         margin-left: 0;
@@ -327,8 +329,11 @@
     }
 }
 @media only screen and (max-width : 480px) {
+    .about-famous .famous-autor{
+        display: none;
+    }
     .about-famous .slick-slide.slick-current.slick-active.slick-center .famous-text{
-        font-size: 10px;
+        font-size: 15px;
     }
     .header .burger{
         margin-right: 20px;
@@ -363,6 +368,16 @@
 
 // Extra Small Devices, Phones
 @media only screen and (max-width : 380px) {
+    .wpcf7-validation-errors{
+        &::before{
+            width: 30%;
+        }
+    }
+    .btn{
+        padding: 12px 25px;
+        font-size: 14px;
+        margin-right: 15px;
+    }
     .main .year{
         margin-right: -10px;
     }

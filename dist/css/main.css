@@ -66,11 +66,7 @@ table {
   src: url("../fonts/Gilroy-Medium.eot?") format("eot"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("truetype"), url("../fonts/Gilroy-Medium.svg#Gilroy") format("svg"); }
 
 .discography__items {
-  margin-top: 36px;
-  margin-bottom: 48px; }
-  @media (max-width: 1200px) {
-    .discography__items {
-      padding: 0; } }
+  margin-top: 36px; }
 
 .discography__item {
   padding: 8px 12px;
@@ -92,6 +88,13 @@ table {
       color: black; }
     .discography__item__toggler-close {
       font-size: 26px; }
+  .discography__item-closed img {
+    width: 95px;
+    height: 80px; }
+  .discography__item-closed p {
+    display: none; }
+  .discography__item-closed .discography__item__audios {
+    display: none; }
   .discography__item-closed .discography__item__toggler-close {
     display: none; }
   .discography__item-closed .discography__item__toggler-open {
@@ -99,18 +102,6 @@ table {
     transform: rotate(-90deg) scale(0.6); }
     .discography__item-closed .discography__item__toggler-open::before {
       content: url(../img/left.svg); }
-  .discography__item-closed .discography__item__info img {
-    width: 95px;
-    height: 80px; }
-  @media (max-width: 768px) {
-    .discography__item-closed .discography__item__info__text h6 {
-      font-size: 14px;
-      padding-top: 24px;
-      white-space: normal; } }
-  .discography__item-closed .discography__item__info__text p {
-    display: none; }
-  .discography__item-closed .discography__item__audios {
-    display: none; }
   .discography__item-opened {
     padding: 32px;
     height: auto;
@@ -118,77 +109,30 @@ table {
     .discography__item-opened img {
       width: 268px;
       height: 268px; }
+    .discography__item-opened p {
+      display: inline-block; }
+    .discography__item-opened .discography__item__audios {
+      display: block; }
     .discography__item-opened .discography__item__toggler-close {
       display: inline-block; }
     .discography__item-opened .discography__item__toggler-open {
       display: none; }
-    @media (max-width: 768px) {
-      .discography__item-opened .discography__item__info {
-        flex-wrap: wrap; }
-        .discography__item-opened .discography__item__info img {
-          margin: 24px 0 0 0;
-          width: 100%; } }
-    .discography__item-opened .discography__item__info__text {
-      max-width: none; }
-      .discography__item-opened .discography__item__info__text p {
-        display: inline-block; }
-      .discography__item-opened .discography__item__info__text h6 {
-        white-space: normal; }
-    .discography__item-opened .discography__item__audios {
-      display: block; }
   .discography__item__info {
     display: flex; }
     .discography__item__info img {
       margin: 0 24px 0 0;
       transition: 0.2s; }
-    .discography__item__info__text {
-      max-width: calc(100% - 196px);
-      overflow: hidden; }
-      .discography__item__info__text h6 {
-        font-size: 25px;
-        padding-top: 24px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        line-height: 1.2; }
-      .discography__item__info__text p {
-        white-space: normal;
-        color: #848181;
-        font-size: 15px;
-        margin-top: 12px;
-        line-height: 1.4; }
+    .discography__item__info h6 {
+      font-size: 25px;
+      padding-top: 32px; }
+    .discography__item__info p {
+      white-space: normal;
+      color: #848181;
+      font-size: 15px;
+      margin-top: 12px;
+      line-height: 1.4; }
   .discography__item__audios {
     margin-top: 36px; }
-
-.image-preview {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: .4s; }
-  .image-preview-closed {
-    opacity: 0;
-    z-index: -1; }
-  .image-preview-opened {
-    opacity: 1;
-    z-index: 9999; }
-  .image-preview__close-icon {
-    cursor: pointer;
-    font-size: 36px;
-    color: black;
-    position: absolute;
-    top: 36px;
-    right: 36px; }
-  .image-preview__image {
-    -o-object-fit: contain;
-       object-fit: contain;
-    width: 88%;
-    max-height: 85%;
-    display: block;
-    margin: 6% auto 0; }
 
 * {
   box-sizing: border-box;
@@ -447,7 +391,8 @@ audio {
     width: 100%;
     font-size: 20px;
     color: #000000;
-    margin-left: 70px; }
+    margin-left: 70px;
+    justify-content: center; }
     .main .btn-about::after {
       content: url(../img/black-arrow.svg); }
   .main-about {
@@ -548,7 +493,8 @@ audio {
   background-image: url(../img/bg.png);
   background-repeat: no-repeat;
   background-position-x: 20%;
-  background-position-y: center; }
+  background-position-y: center;
+  background-repeat-y: repeat; }
   .news .section-title {
     text-align: center;
     color: #000000; }
@@ -709,10 +655,10 @@ audio {
     display: flex;
     justify-content: space-between;
     padding: 0 80px; }
-    @media (max-width: 992px) {
+    @media (max-width: 976px) {
       .contacts__info {
-        padding: 0; } }
-    @media (max-width: 768px) {
+        padding: 0 40px; } }
+    @media (max-width: 668px) {
       .contacts__info {
         flex-direction: column;
         align-items: center; } }
@@ -734,7 +680,7 @@ audio {
         font-size: 20px;
         color: black;
         line-height: 1.4; }
-      @media (max-width: 768px) {
+      @media (max-width: 668px) {
         .contacts__info__person-description {
           width: 100%;
           margin-bottom: 32px; }
@@ -772,7 +718,7 @@ audio {
       @media (max-width: 976px) {
         .contacts__info__form {
           width: calc(100% - 288px); } }
-      @media (max-width: 768px) {
+      @media (max-width: 668px) {
         .contacts__info__form {
           width: 100%; } }
       .contacts__info__form input, .contacts__info__form textarea {
@@ -806,9 +752,9 @@ audio {
     @media (max-width: 1200px) {
       .contacts-wrap {
         padding: 0 20px; } }
-    @media (max-width: 992px) {
+    @media (max-width: 1000px) {
       .contacts-wrap {
-        padding: 0; } }
+        padding: 0 40px; } }
     @media (max-width: 668px) {
       .contacts-wrap {
         flex-direction: column;
@@ -818,10 +764,9 @@ audio {
     @media (max-width: 1300px) {
       .contacts-map {
         width: 60%; } }
-    @media (max-width: 1200px) {
+    @media (max-width: 668px) {
       .contacts-map {
-        width: 100%;
-        margin-bottom: 24px; } }
+        width: 100%; } }
     .contacts-map section, .contacts-map iframe, .contacts-map img {
       width: 100%; }
     .contacts-map img {
@@ -830,10 +775,10 @@ audio {
   .contacts-info {
     background-color: white;
     margin-right: 16px; }
-    @media (max-width: 1200px) {
+    @media (max-width: 668px) {
       .contacts-info {
-        width: 100%;
-        padding: 16px 0; } }
+        margin-bottom: 24px;
+        width: 100%; } }
   .contacts__title {
     font-family: 'Gilroy';
     font-weight: 500;
@@ -1187,7 +1132,8 @@ audio {
   background-image: url(../img/big-bg.png);
   background-repeat: no-repeat;
   background-position-x: 78%;
-  background-position-y: center; }
+  background-position-y: center;
+  background-repeat-y: repeat; }
 
 .community-page .community-wrap {
   display: flex;
@@ -1226,17 +1172,10 @@ audio {
   height: 6px;
   margin-right: 5px; }
 
-@media (max-width: 1200px) {
-  .media__archive {
-    padding: 0; } }
-
 .media__archive__content {
-  display: none;
+  display: flex;
   align-items: flex-start;
   margin-top: 24px; }
-  @media (min-width: 769px) {
-    .media__archive__content {
-      display: flex; } }
   .media__archive__content__years {
     display: flex;
     flex-direction: column;
@@ -1268,7 +1207,6 @@ audio {
         display: grid !important;
         grid-template-columns: 33.33% 33.33% 33.33%; }
         .media__archive__content__photos__slider__item img {
-          cursor: pointer;
           height: 175px;
           width: 100%;
           -o-object-fit: cover;
@@ -1293,51 +1231,10 @@ audio {
       color: #848181;
       height: 40px; }
 
-.media__archive__content-mobile {
-  display: none;
-  margin-top: 36px; }
-  @media (max-width: 768px) {
-    .media__archive__content-mobile {
-      display: block; } }
-  .media__archive__content-mobile__items__item {
-    width: 100%;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
-    margin-bottom: 8px;
-    background-color: white; }
-    .media__archive__content-mobile__items__item-opened .media__archive__content-mobile__items__item__year {
-      background-color: #B6251D;
-      color: white;
-      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-      margin-bottom: 16px; }
-    .media__archive__content-mobile__items__item-opened .media__archive__content-mobile__items__item__photos {
-      height: 500px;
-      display: block; }
-    .media__archive__content-mobile__items__item__year {
-      cursor: pointer;
-      font-size: 20px;
-      text-align: center;
-      padding: 16px;
-      transition: .3s; }
-    .media__archive__content-mobile__items__item__photos {
-      overflow-y: auto;
-      overflow-x: hidden;
-      height: 0;
-      transition: .3s; }
-      .media__archive__content-mobile__items__item__photos img {
-        width: 100%;
-        height: 260px;
-        -o-object-fit: cover;
-           object-fit: cover;
-        padding: 0 16px 16px; }
-
 .media__video {
   background-color: #F0F0F0;
   padding: 48px 24px 60px;
   margin-bottom: 48px; }
-  @media (max-width: 576px) {
-    .media__video {
-      padding-left: 0;
-      padding-right: 0; } }
   .media__video__content {
     margin-top: 48px;
     display: flex;
@@ -1377,26 +1274,9 @@ audio {
              object-fit: cover; }
         .media__video__content__list__preview-active {
           background-color: #B6251D; }
-    @media (max-width: 768px) {
-      .media__video__content {
-        height: auto;
-        flex-wrap: wrap; }
-        .media__video__content__player {
-          width: 100%;
-          height: 436px; }
-        .media__video__content__list {
-          height: auto;
-          margin: 0;
-          width: 100%;
-          margin-top: 24px;
-          white-space: nowrap; }
-          .media__video__content__list__preview {
-            display: inline-flex; }
-            .media__video__content__list__preview:last-child {
-              margin-right: 0; } }
 
 .menu1 .menu-item > a {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy-Regular';
   color: #848181;
   text-decoration: none; }
 
@@ -1404,14 +1284,8 @@ audio {
   color: #000000;
   transition: color 0.25s ease-out; }
 
-.menu2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  grid-gap: 10px 25px; }
-
 .menu2 .menu-item > a {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy-Regular';
   font-size: 18px;
   line-height: 23px;
   text-decoration: none;
@@ -1475,7 +1349,8 @@ audio {
       font-size: 15px; }
   .form-wrap .form .btn {
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    outline: none; }
   .form-wrap .form__label__input {
     height: 30px;
     background-color: #F0F0F0;
@@ -1509,6 +1384,31 @@ audio {
     height: calc(20px * 4);
     resize: none; }
 
+.discography__items .news__btn {
+  margin-top: 40px; }
+
+.wpcf7-validation-errors {
+  margin: 2em 0.5em 1em;
+  padding: 20px 0% 20px 25%;
+  border: 2px solid #ff0000; }
+
+.wpcf7-validation-errors {
+  position: relative;
+  border: 1px solid grey; }
+  .wpcf7-validation-errors::before {
+    content: '';
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #53b153;
+    background-image: url("../img/done.svg");
+    background-position: center;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    width: 20%;
+    height: 100%;
+    position: absolute; }
+
 @media only screen and (max-width: 1200px) {
   .about-famous .slick-prev {
     left: 500px;
@@ -1535,6 +1435,10 @@ audio {
     display: none; } }
 
 @media only screen and (max-width: 992px) {
+  .main .image {
+    height: auto; }
+  .main .main__img {
+    height: auto; }
   .about-famous .slick-slide.slick-current.slick-active.slick-center blockquote {
     position: static;
     margin-left: 0; }
@@ -1710,8 +1614,10 @@ audio {
       margin-bottom: 20px; } }
 
 @media only screen and (max-width: 480px) {
+  .about-famous .famous-autor {
+    display: none; }
   .about-famous .slick-slide.slick-current.slick-active.slick-center .famous-text {
-    font-size: 10px; }
+    font-size: 15px; }
   .header .burger {
     margin-right: 20px; }
   .about-details .festival {
@@ -1733,6 +1639,12 @@ audio {
     right: -75px; } }
 
 @media only screen and (max-width: 380px) {
+  .wpcf7-validation-errors::before {
+    width: 30%; }
+  .btn {
+    padding: 12px 25px;
+    font-size: 14px;
+    margin-right: 15px; }
   .main .year {
     margin-right: -10px; }
   .main-header .main__title {

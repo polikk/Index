@@ -16,7 +16,6 @@ html(lang="en")
     body
         include partials/header
         main.media.bg-right
-            include partials/image-preview
             section.container.section.media__archive
                 h6.section-title.section-title-black.center Фотогалерея
                 .media__archive__content
@@ -27,33 +26,19 @@ html(lang="en")
                         .media__archive__content__photos__slider
                             each val in [1, 2, 3]
                                 .media__archive__content__photos__slider__item
-                                    img.image-to-preview.media__archive__content__photos__slider__item__img(src="https://static.ukrinform.com/photos/2019_07/thumb_files/630_360_1562593246-984.jpg")
-                                    img.image-to-preview.media__archive__content__photos__slider__item__img(src="https://hungary.mfa.gov.ua/storage/app/uploads/public/5df/2df/d89/5df2dfd892a33806183584.jpg")
-                                    img.image-to-preview.media__archive__content__photos__slider__item__img(src="https://i.ytimg.com/vi/mRaxb4HLhsw/maxresdefault.jpg")
-                                    img.image-to-preview.media__archive__content__photos__slider__item__img(src="https://novyny.org/wp-content/uploads/2019/07/cropped-SCL-243klein.jpg")
-                                    img.image-to-preview.media__archive__content__photos__slider__item__img(src="https://www.ufest.in.ua/images/common/1/0/3/6/4/1/5c367e396e1ab.jpg")
-                                    img.image-to-preview.media__archive__content__photos__slider__item__img(src="https://womo.ua/wp-content/uploads/2016/03/12039748_994876960560825_2052831705818175456_n.jpg")
-                                    img.image-to-preview.media__archive__content__photos__slider__item__img(src="https://hungary.mfa.gov.ua/storage/app/uploads/public/5df/2df/d89/5df2dfd892a33806183584.jpg")
-                                    img.image-to-preview.media__archive__content__photos__slider__item__img(src="https://m.day.kyiv.ua/sites/default/files/main/articles/09082019/24hor2.jpg")
-                                    img.image-to-preview.media__archive__content__photos__slider__item__img(src="https://static.ukrinform.com/photos/2019_07/thumb_files/630_360_1562593246-984.jpg")
-                                    img.image-to-preview.media__archive__content__photos__slider__item__img(src="https://hungary.mfa.gov.ua/storage/app/uploads/public/5df/2df/d89/5df2dfd892a33806183584.jpg")
-                                    img.image-to-preview.media__archive__content__photos__slider__item__img(src="https://i.ytimg.com/vi/mRaxb4HLhsw/maxresdefault.jpg")
-                                    img.image-to-preview.media__archive__content__photos__slider__item__img(src="https://static.ukrinform.com/photos/2019_07/thumb_files/630_360_1562593246-984.jpg")
+                                    img(src="https://static.ukrinform.com/photos/2019_07/thumb_files/630_360_1562593246-984.jpg")
+                                    img(src="https://hungary.mfa.gov.ua/storage/app/uploads/public/5df/2df/d89/5df2dfd892a33806183584.jpg")
+                                    img(src="https://i.ytimg.com/vi/mRaxb4HLhsw/maxresdefault.jpg")
+                                    img(src="https://novyny.org/wp-content/uploads/2019/07/cropped-SCL-243klein.jpg")
+                                    img(src="https://www.ufest.in.ua/images/common/1/0/3/6/4/1/5c367e396e1ab.jpg")
+                                    img(src="https://womo.ua/wp-content/uploads/2016/03/12039748_994876960560825_2052831705818175456_n.jpg")
+                                    img(src="https://hungary.mfa.gov.ua/storage/app/uploads/public/5df/2df/d89/5df2dfd892a33806183584.jpg")
+                                    img(src="https://m.day.kyiv.ua/sites/default/files/main/articles/09082019/24hor2.jpg")
+                                    img(src="https://static.ukrinform.com/photos/2019_07/thumb_files/630_360_1562593246-984.jpg")
+                                    img(src="https://hungary.mfa.gov.ua/storage/app/uploads/public/5df/2df/d89/5df2dfd892a33806183584.jpg")
+                                    img(src="https://i.ytimg.com/vi/mRaxb4HLhsw/maxresdefault.jpg")
+                                    img(src="https://static.ukrinform.com/photos/2019_07/thumb_files/630_360_1562593246-984.jpg")
                         .media__archive__content__photos__navigation
-
-                .media__archive__content-mobile
-                    .media__archive__content-mobile__items
-                        each val, index in ['2020 - 2010', '2010 - 2000', '2000 - 1990', '1990 - 1980', '1980 - 1970', '1970 - 1960']
-                            .media__archive__content-mobile__items__item
-                                .media__archive__content-mobile__items__item__year=val
-                                .media__archive__content-mobile__items__item__photos
-                                    img.image-to-preview(src="https://static.ukrinform.com/photos/2019_07/thumb_files/630_360_1562593246-984.jpg")
-                                    img.image-to-preview(src="https://hungary.mfa.gov.ua/storage/app/uploads/public/5df/2df/d89/5df2dfd892a33806183584.jpg")
-                                    img.image-to-preview(src="https://i.ytimg.com/vi/mRaxb4HLhsw/maxresdefault.jpg")
-                                    img.image-to-preview(src="https://novyny.org/wp-content/uploads/2019/07/cropped-SCL-243klein.jpg")
-                                    img.image-to-preview(src="https://www.ufest.in.ua/images/common/1/0/3/6/4/1/5c367e396e1ab.jpg")
-                            
-
 
 
             section.section.media__video
